@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: ropevim
+Version: 0.3-rc
+Summary: A vim plugin for using rope python refactoring library
+Home-page: http://rope.sf.net/ropevim.html
+Author: Ali Gholami Rudi
+Author-email: aligrudi@users.sourceforge.net
+License: GNU GPL
+Description: 
+        ======================
+         ropevim, rope in vim
+        ======================
+        
+        Ropevim is a vim mode that uses rope_ library to provide features like
+        python refactorings and code-assists.  You should install rope_
+        library before using ropevim.
+        
+        .. _rope: http://rope.sf.net/
+        
+        
+        New Features
+        ============
+        
+        * improved support of multibyte sources
+        * implemented `extended complete` feature (disabled by default)
+        * ropemode is not the part of distribution now
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires: ropemode

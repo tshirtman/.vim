@@ -1,0 +1,13 @@
+#use glob syntax
+syntax: glob
+
+#python
+*.pyc
+
+#vim
+*.un~
+*.swp
+*.swo
+
+#ropeproject
+*.ropeproject

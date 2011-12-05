@@ -1,6 +1,9 @@
 syntax on
 filetype plugin indent on
 
+let $PYTHONPATH .= ":~/.vim/bundle/ropevim/plugin/"
+source ~/.vim/bundle/ropevim/plugin/ropevim.vim
+
 call pathogen#infect()
 
 set encoding&		" terminal charset: follows current locale

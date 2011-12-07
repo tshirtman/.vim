@@ -16,3 +16,15 @@
 [submodule "bundle/vim-space"]
 	path = bundle/vim-space
 	url = https://github.com/spiiph/vim-space.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/ropevim"]
+	path = bundle/ropevim
+	url = https://github.com/gordyt/rope-vim.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim

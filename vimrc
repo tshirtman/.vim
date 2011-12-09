@@ -21,34 +21,57 @@ set aw
 set showtabline=1
 set laststatus=2
 
+" easier to type than \
 let mapleader = ";"
 
 map <F2> : <Up><CR>
 imap <F3> <Esc> .i
+
+" save session and all files and exit with f4, use vim -S in same directory to restore
 map <F4> :wa <CR>:mksession!<CR>:xa<CR>
+
+" dirty commenting/uncommenting functions with f5/F6, better to use
+" nerdcommenter
 map <F5> :s/\(^ *\)/\1#/ <CR>:let @/ = ""<CR>
 map <F6> :s/\(^ *\)#/\1/ <CR>:let @/ = ""<CR>
-map ù :pu_<CR>
+
+" use tab to indent/unindent text or selected text
 map <tab> >>
 map <S-tab> <<
 vmap <tab> >gv
 vmap <S-tab> <gv
+
+"use ctrl -> and ctrl <- to navigate between tabs
 noremap <C-Left> gT
 noremap <C-Right> gt
+
+" same, but on hosts with weird keymap issues
 noremap [1;5D gT
 noremap [1;5C gt
+
+" ctrl-t to open new tab
 noremap  :tabnew 
+
+" hide hl and signs on ctrl-l
 nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
+
+" reverse two words
 nmap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
+
+" use enter in normal mode to insert empty lines
 nmap <CR> o<ESC>
 
 let g:xml_syntax_folding=1
+
+" trigger french or english spell correction
 map <leader>sf :setlocal spell spelllang=fr<CR>
 map <leader>se :setlocal spell spelllang=en_US<CR>
 nnoremap <F9> :GundoToggle<CR>
 
+" hey, don't forget to change my name for yours if you copy that :)
 ab GPL_LICENSE #################################################################################<enter># copyright 2011 Gabriel Pettier <gabriel.pettier@gmail.com><enter>#<enter># This file is part of PROJECT<enter>#<enter># PROJECT is free software: you can redistribute it and/or modify<enter># it under the terms of the GNU General Public License as published by<enter># the Free Software Foundation, either version 3 of the License, or<enter># (at your option) any later version.<enter>#<enter># PROJECT is distributed in the hope that it will be useful,<enter># but WITHOUT ANY WARRANTY; without even the implied warranty of<enter># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<enter># GNU General Public License for more details.<enter>#<enter># You should have received a copy of the GNU General Public License<enter># along with PROJECT.  If not, see <http://www.gnu.org/licenses/>.<enter>##############################################################################<enter>
 
+" mapping to Todo List pluggin toggle
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 let g:miniBufExplMapWindowNavVim = 1
@@ -56,11 +79,14 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
+" auto loading of template files for various programming language at file
+" creation
 autocmd BufNewFile *.py 0r ~/.vim/skeleton.py
 autocmd BufNewFile *.c 0r ~/.vim/skeleton.c
 autocmd BufNewFile *.tex 0r ~/.vim/skeleton.tex
 
-"hide passwords when editing
+"hide passwords when editing (you can use select mode to see it), doesn't work
+"with all terminal types, but useful
 hi Password ctermfg=black ctermbg=black cterm=NONE guifg=black guibg=black 
 match Password /pass.*\s*=\s*\k\{-}\zs[^ ]*\ze.\{-}/
 
@@ -84,10 +110,10 @@ set statusline+=%{&ff}] "file format
 "set statusline+=%m      "modified flag
 set statusline+=%r      "read only flag
 "set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
 set statusline+=%{fugitive#statusline()} "fugitive
+set statusline+=%=      "left/right separator
 set statusline+=%#warningmsg
-set statusline+=%{SyntasticStatuslineFlag()}%*
+"set statusline+=%{SyntasticStatuslineFlag()}%*
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 "set statusline+=\ %P    "percent through file

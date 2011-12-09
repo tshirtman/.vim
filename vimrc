@@ -12,13 +12,13 @@ set ruler
 set wildmenu
 set bg=dark
 set syntax=auto
-set nu
-set ai
-set hls
-set so=2
+set number
+set autoindent
+set hlsearch
+set scrolloff=2
 set incsearch
-set aw
-set showtabline=1
+set autowrite
+set showtabline=2
 set laststatus=2
 
 " easier to type than \
@@ -55,7 +55,8 @@ noremap  :tabnew
 " hide hl and signs on ctrl-l
 nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
 
-" reverse two words
+" reverse two words (the one under cursor with the next one) with gw in normal
+" mode
 nmap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
 
 " use enter in normal mode to insert empty lines
@@ -103,8 +104,10 @@ let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=2
 
 " statusline
-set statusline=%t       "tail of the filename
-"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline=%F 	"full path to file
+"set statusline+=%t       "tail of the filename
+set statusline+=[
+set statusline+=%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}] "file format
 "set statusline+=%h      "help file flag
 "set statusline+=%m      "modified flag
@@ -112,9 +115,9 @@ set statusline+=%r      "read only flag
 "set statusline+=%y      "filetype
 set statusline+=%{fugitive#statusline()} "fugitive
 set statusline+=%=      "left/right separator
-set statusline+=%#warningmsg
-"set statusline+=%{SyntasticStatuslineFlag()}%*
+"set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}%*
 set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-"set statusline+=\ %P    "percent through file
-
+set statusline+=%l/%L,   "cursor line/total lines
+set statusline+=%p%%      "percent through file
+"set statusline+=*

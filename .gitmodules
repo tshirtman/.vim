@@ -19,12 +19,12 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "bundle/ropevim"]
-	path = bundle/ropevim
-	url = https://github.com/gordyt/rope-vim.git
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = http://github.com/mattn/zencoding-vim
+[submodule "bundle/pycomplexity"]
+	path = bundle/pycomplexity
+	url = https://github.com/garybernhardt/pycomplexity.git

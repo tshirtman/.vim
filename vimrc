@@ -1,9 +1,6 @@
 syntax on
 filetype plugin indent on
 
-let $PYTHONPATH .= ":~/.vim/bundle/ropevim/plugin/"
-source ~/.vim/bundle/ropevim/plugin/ropevim.vim
-
 call pathogen#infect()
 
 set encoding&		" terminal charset: follows current locale
@@ -41,12 +38,14 @@ noremap <C-Right> gt
 noremap [1;5D gT
 noremap [1;5C gt
 noremap  :tabnew 
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
 nmap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
+nmap <CR> o<ESC>
 
 let g:xml_syntax_folding=1
 map <leader>sf :setlocal spell spelllang=fr<CR>
 map <leader>se :setlocal spell spelllang=en_US<CR>
+nnoremap <F9> :GundoToggle<CR>
 
 ab GPL_LICENSE #################################################################################<enter># copyright 2011 Gabriel Pettier <gabriel.pettier@gmail.com><enter>#<enter># This file is part of PROJECT<enter>#<enter># PROJECT is free software: you can redistribute it and/or modify<enter># it under the terms of the GNU General Public License as published by<enter># the Free Software Foundation, either version 3 of the License, or<enter># (at your option) any later version.<enter>#<enter># PROJECT is distributed in the hope that it will be useful,<enter># but WITHOUT ANY WARRANTY; without even the implied warranty of<enter># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<enter># GNU General Public License for more details.<enter>#<enter># You should have received a copy of the GNU General Public License<enter># along with PROJECT.  If not, see <http://www.gnu.org/licenses/>.<enter>##############################################################################<enter>
 
@@ -79,17 +78,17 @@ let g:syntastic_auto_loc_list=2
 
 " statusline
 set statusline=%t       "tail of the filename
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
+"set statusline+=%h      "help file flag
+"set statusline+=%m      "modified flag
 set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
+"set statusline+=%y      "filetype
 set statusline+=%=      "left/right separator
 set statusline+=%{fugitive#statusline()} "fugitive
 set statusline+=%#warningmsg
-set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{SyntasticStatuslineFlag()}%*
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+"set statusline+=\ %P    "percent through file
 

@@ -112,7 +112,7 @@ inoremap <Nul> <C-x><C-o>
 autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-source ~/.vim/pycomplexity/complexity.vim
+source ~/.vim/bundle/pycomplexity/complexity.vim
 nmap Q :cal ShowComplexity()<CR>
 
 " ropvim configuration

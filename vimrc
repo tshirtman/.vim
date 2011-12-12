@@ -82,9 +82,26 @@ let g:miniBufExplModSelTarget = 1
 
 " auto loading of template files for various programming language at file
 " creation
-autocmd BufNewFile *.py 0r ~/.vim/skeleton.py
-autocmd BufNewFile *.c 0r ~/.vim/skeleton.c
-autocmd BufNewFile *.tex 0r ~/.vim/skeleton.tex
+" When editing a new file, load skeleton if any.
+" If we find <+FILENAME+> in skeleton, replace it by the filename.
+" If we find <+HEADERNAME+> in skeleton, replace it by the filename
+" uppercase with . replaced by _ (foo.h become FOO_H).
+autocmd BufNewFile *
+	\ let skel = $HOME . "/.vim/skeletons/skel." . expand("%:e") |
+	\ if filereadable(skel) |
+	\   execute "silent! 0read " . skel |
+	\   let fn = expand("%") |
+	\   let hn = substitute(expand("%"), "\\w", "\\u\\0", "g") |
+	\   let hn = substitute(hn, "\\.", "_", "g") |
+	\   let hn = substitute(hn, "/", "_", "g") |
+	\   let cn = expand("%:t:r") |
+	\   %s/<+FILENAME+>/\=fn/Ige |
+	\   %s/<+HEADERNAME+>/\=hn/Ige |
+	\   %s/<+CLASSNAME+>/\=cn/Ige |
+	\   unlet fn hn cn |
+	\ endif |
+	\ unlet skel |
+	\ goto 
 
 "hide passwords when editing (you can use select mode to see it), doesn't work
 "with all terminal types, but useful
@@ -121,3 +138,5 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L,   "cursor line/total lines
 set statusline+=%p%%      "percent through file
 "set statusline+=*
+
+

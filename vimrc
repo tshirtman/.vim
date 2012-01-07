@@ -32,8 +32,8 @@ map <F4> :wa <CR>:mksession!<CR>:xa<CR>
 
 " dirty commenting/uncommenting functions with f5/F6, better to use
 " nerdcommenter
-map <F5> :s/\(^ *\)/\1#/ <CR>:let @/ = ""<CR>
-map <F6> :s/\(^ *\)#/\1/ <CR>:let @/ = ""<CR>
+map <F5> <leader>cc
+map <F6> <leader>cu
 
 " use tab to indent/unindent text or selected text
 map <tab> >>
@@ -102,6 +102,24 @@ autocmd BufNewFile *
 	\ endif |
 	\ unlet skel |
 	\ goto 
+
+" this function will delete a swapfile without asking if the file was unchanged
+" or newer than the swapfile
+function! Check_swapfile()
+python << endpython
+import vim
+import os
+swapfilename = vim.eval('v:swapname')
+filename = vim.eval('expand("<afile>")')
+print swapfilename, filename
+if os.stat(filename).st_ctime > os.stat(swapfilename).st_ctime:
+    vim.command("let v:swapchoice='d'")
+
+endpython
+endfunction
+
+" bind check_swapfile function to SwapExists
+autocmd SwapExists * call Check_swapfile()
 
 "hide passwords when editing (you can use select mode to see it), doesn't work
 "with all terminal types, but useful

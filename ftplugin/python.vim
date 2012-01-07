@@ -6,6 +6,8 @@ set tabstop=8
 set list
 set listchars=tab:__,trail:.
 
+ab xxx import pdb; pdb.set_trace()
+
 " More syntax highlighting.
 let python_highlight_all = 1
 

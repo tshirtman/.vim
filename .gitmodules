@@ -28,3 +28,6 @@
 [submodule "bundle/pycomplexity"]
 	path = bundle/pycomplexity
 	url = https://github.com/garybernhardt/pycomplexity.git
+[submodule "bundle/ColorV"]
+	path = bundle/ColorV
+	url = https://github.com/Rykka/ColorV/

@@ -157,4 +157,10 @@ set statusline+=%l/%L,   "cursor line/total lines
 set statusline+=%p%%      "percent through file
 "set statusline+=*
 
+if has('gui_running')
+	set guioptions=
+	colorscheme slate
+else
+        set t_Co=256
+endif
 

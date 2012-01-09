@@ -1,3 +1,12 @@
+if has("win32")
+	" fix pathogen
+	let $VIMHOME=expand('<sfile>:p:h:h')
+	so $VIMHOME\_vim\autoload\pathogen.vim
+	call pathogen#infect('$VIMHOME\_vim\bundle')
+	" fix backspace in insert mode, remember, we are on windows, we need twice the BS :P
+	se bs=2
+endif
+
 syntax on
 filetype plugin indent on
 

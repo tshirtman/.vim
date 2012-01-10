@@ -104,7 +104,8 @@ autocmd BufNewFile *
 	\ goto 
 
 " this function will delete a swapfile without asking if the file was unchanged
-" or newer than the swapfile
+" or newer than the swapfile, else, auto recover, either there are changes to
+" recover, or it doesn't change anything
 function! Check_swapfile()
 python << endpython
 import vim
@@ -114,6 +115,8 @@ filename = vim.eval('expand("<afile>")')
 print swapfilename, filename
 if os.stat(filename).st_ctime > os.stat(swapfilename).st_ctime:
     vim.command("let v:swapchoice='d'")
+else:
+    vim.command("let v:swapchoice='r'")
 
 endpython
 endfunction

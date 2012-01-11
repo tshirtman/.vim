@@ -168,7 +168,7 @@ set statusline+=%p%%      "percent through file
 
 if has('gui_running')
 	set guioptions=
-	colorscheme slate
+	colorscheme pablo
 else
         set t_Co=256
 endif

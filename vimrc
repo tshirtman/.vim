@@ -1,3 +1,12 @@
+if has("win32")
+	" fix pathogen
+	let $VIMHOME=expand('<sfile>:p:h:h')
+	so $VIMHOME\_vim\autoload\pathogen.vim
+	call pathogen#infect('$VIMHOME\_vim\bundle')
+	" fix backspace in insert mode, remember, we are on windows, we need twice the BS :P
+	se bs=2
+endif
+
 syntax on
 filetype plugin indent on
 
@@ -138,8 +147,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_auto_jump=1
 "let g:syntastic_auto_loc_list=0
-"let g:syntastic_auto_loc_list=1
-let g:syntastic_auto_loc_list=2
+let g:syntastic_auto_loc_list=1
+"let g:syntastic_auto_loc_list=2
 
 " statusline
 set statusline=%F 	"full path to file
@@ -160,4 +169,10 @@ set statusline+=%l/%L,   "cursor line/total lines
 set statusline+=%p%%      "percent through file
 "set statusline+=*
 
+if has('gui_running')
+	set guioptions=
+	colorscheme pablo
+else
+        set t_Co=256
+endif
 

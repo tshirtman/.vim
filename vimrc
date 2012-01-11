@@ -112,26 +112,28 @@ autocmd BufNewFile *
 	\ unlet skel |
 	\ goto 
 
-" this function will delete a swapfile without asking if the file was unchanged
-" or newer than the swapfile, else, auto recover, either there are changes to
-" recover, or it doesn't change anything
-function! Check_swapfile()
+" this function will delete a swapfile without asking if the file is newer
+" than the swapfile, else, auto recover, either there are changes to recover,
+" or it doesn't change anything (and it will be deleted next start)
+function! CheckSwapfile()
 python << endpython
 import vim
 import os
+
 swapfilename = vim.eval('v:swapname')
 filename = vim.eval('expand("<afile>")')
-print swapfilename, filename
+
 if os.stat(filename).st_ctime > os.stat(swapfilename).st_ctime:
     vim.command("let v:swapchoice='d'")
+
 else:
     vim.command("let v:swapchoice='r'")
 
 endpython
 endfunction
 
-" bind check_swapfile function to SwapExists
-autocmd SwapExists * call Check_swapfile()
+" bind CheckSwapfile function to SwapExists
+autocmd SwapExists * call CheckSwapfile()
 
 "hide passwords when editing (you can use select mode to see it), doesn't work
 "with all terminal types, but useful
@@ -176,6 +178,7 @@ else
         set t_Co=256
 endif
 
+" indent guide conf
 noremap <F12> :IndentGuidesToggle<CR>
 "let g:indent_guides_auto_colors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3

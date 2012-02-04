@@ -5,9 +5,6 @@ if has("win32")
 	call pathogen#infect('$VIMHOME\_vim\bundle')
 	" fix backspace in insert mode, remember, we are on windows, we need twice the BS :P
 	se bs=2
-	let g:clipbrdDefaultReg = '*'
-else
-	let g:clipbrdDefaultReg = '+'
 endif
 
 syntax on
@@ -37,6 +34,7 @@ set laststatus=2
 set showcmd
 set nohidden
 set autoread
+set clipboard+=unnamed " system clipboard as default register.
 
 " easier to type than \
 let mapleader = ";"

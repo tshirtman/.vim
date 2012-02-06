@@ -36,6 +36,10 @@ set nohidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.
 
+" cool trick to insert dates
+iab <expr> isodate strftime("%Y-%m-%d")
+iab <expr> frdate strftime("%d/%m/%Y")
+
 " easier to type than \
 let mapleader = ";"
 

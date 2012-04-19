@@ -39,11 +39,8 @@ set clipboard+=unnamed " system clipboard as default register.
 " easier to type than \
 let mapleader = ";"
 
-map <F2> : <Up><CR>
-imap <F3> <Esc> .i
-
 " save session and all files and exit with f4, use vim -S in same directory to restore
-map <F4> :wa <CR>:mksession!<CR>:xa<CR>
+map <F4> :tabdo lcl<CR> :wa <CR>:mksession!<CR>:xa<CR>
 
 " dirty commenting/uncommenting functions with f5/F6, better to use
 " nerdcommenter
@@ -197,13 +194,7 @@ map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 
 " pep8 mapping, putting this in ftplugin/python.vim doesn't seem to work
-let g:pep8_map='<F7>'
-
-" Disable pylint checking every save
-let g:pymode_lint_write = 0
-
-" Set key 'R' for run python code
-let g:pymode_run_key = 'R'
+let g:pep8_map='<F2>'
 
 " Load show documentation plugin
 let g:pymode_doc = 1
@@ -221,7 +212,7 @@ let g:pymode_run = 1
 let g:pymode_run_key = '<leader>r'
 
 " Load pylint code plugin
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 
 " Switch pylint or pyflakes code checker
 " values (pylint, pyflakes)
@@ -248,6 +239,7 @@ let g:pymode_lint_minheight = 3
 
 " Maximal height of pylint error window
 let g:pymode_lint_maxheight = 6
+
 " Load rope plugin
 let g:pymode_rope = 1
 

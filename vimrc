@@ -1,8 +1,23 @@
+" MASOCHIST anti-arrows experiment
+" see http://jeetworks.org/node/89
+inoremap <right> <nop>
+inoremap <left> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+noremap <right> <nop>
+noremap <left> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+" /MASOCHIST
+
+inoremap jj <ESC>
+
 if has("win32")
 	" fix pathogen
 	let $VIMHOME=expand('<sfile>:p:h:h')
 	so $VIMHOME\_vim\autoload\pathogen.vim
 	call pathogen#infect('$VIMHOME\_vim\bundle')
+	call pathogen#helptags()
 	" fix backspace in insert mode, remember, we are on windows, we need twice the BS :P
 	se bs=2
 endif
@@ -28,11 +43,12 @@ set scrolloff=2
 set incsearch
 set ignorecase
 set smartcase
-set autowrite
-set showtabline=2
+"set autowrite
+"set showtabline=2
 set laststatus=2
 set showcmd
-set nohidden
+"set nohidden
+set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.
 
@@ -44,7 +60,7 @@ iab <expr> frdate strftime("%d/%m/%Y")
 let mapleader = ";"
 
 " save session and all files and exit with f4, use vim -S in same directory to restore
-map <F4> :tabdo lcl<CR> :wa <CR>:mksession!<CR>:xa<CR>
+map <F4> :tabdo lcl<CR>:wa <CR>:mksession!<CR>:xa<CR>
 
 " dirty commenting/uncommenting functions with f5/F6, better to use
 " nerdcommenter
@@ -57,16 +73,19 @@ map <S-tab> <<
 vmap <tab> >gv
 vmap <S-tab> <gv
 
-"use ctrl -> and ctrl <- to navigate between tabs
-noremap <C-Left> gT
-noremap <C-Right> gt
+""use ctrl -> and ctrl <- to navigate between tabs
+"noremap <C-Left> gT
+"noremap <C-Right> gt
+"use ctrl -> and ctrl <- to navigate between buffers
+noremap <C-Left> :bp!<CR>
+noremap <C-Right> :bn!<CR>
 
 " same, but on hosts with weird keymap issues
-noremap [1;5D gT
-noremap [1;5C gt
+noremap [1;5D :bp!<CR>
+noremap [1;5C :bn!<CR>
 
 " ctrl-t to open new tab
-noremap  :tabnew 
+noremap  <leader>t
 
 " hide hl and signs on ctrl-l
 nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
@@ -86,7 +105,7 @@ map <leader>se :setlocal spell spelllang=en_US<CR>
 nnoremap <F9> :GundoToggle<CR>
 
 " hey, don't forget to change my name for yours if you copy that :)
-ab GPL_LICENSE #################################################################################<enter># copyright 2011 Gabriel Pettier <gabriel.pettier@gmail.com><enter>#<enter># This file is part of PROJECT<enter>#<enter># PROJECT is free software: you can redistribute it and/or modify<enter># it under the terms of the GNU General Public License as published by<enter># the Free Software Foundation, either version 3 of the License, or<enter># (at your option) any later version.<enter>#<enter># PROJECT is distributed in the hope that it will be useful,<enter># but WITHOUT ANY WARRANTY; without even the implied warranty of<enter># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<enter># GNU General Public License for more details.<enter>#<enter># You should have received a copy of the GNU General Public License<enter># along with PROJECT.  If not, see <http://www.gnu.org/licenses/>.<enter>##############################################################################<enter>
+ab GPL_LICENSE #################################################################################<enter># copyright 2012 Gabriel Pettier <gabriel.pettier@gmail.com><enter>#<enter># This file is part of PROJECT<enter>#<enter># PROJECT is free software: you can redistribute it and/or modify<enter># it under the terms of the GNU General Public License as published by<enter># the Free Software Foundation, either version 3 of the License, or<enter># (at your option) any later version.<enter>#<enter># PROJECT is distributed in the hope that it will be useful,<enter># but WITHOUT ANY WARRANTY; without even the implied warranty of<enter># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<enter># GNU General Public License for more details.<enter>#<enter># You should have received a copy of the GNU General Public License<enter># along with PROJECT.  If not, see <http://www.gnu.org/licenses/>.<enter>##############################################################################<enter>
 
 " mapping to Todo List pluggin toggle
 nnoremap <silent> <F8> :TlistToggle<CR>
@@ -193,12 +212,8 @@ noremap <F12> :IndentGuidesToggle<CR>
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-" ropevim
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
-
 " pep8 mapping, putting this in ftplugin/python.vim doesn't seem to work
-let g:pep8_map='<F2>'
+let g:pep8_map='<F3>'
 
 " Load show documentation plugin
 let g:pymode_doc = 1

@@ -55,3 +55,9 @@
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim/
+[submodule "bundle/command_t"]
+	path = bundle/command_t
+	url = git://github.com/wincent/Command-T.git
+[submodule "bundle/yank-ring"]
+	path = bundle/yank-ring
+	url = https://github.com/vim-scripts/YankRing.vim.git

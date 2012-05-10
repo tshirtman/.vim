@@ -49,3 +49,6 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode.git
+[submodule "bundle/command_t"]
+	path = bundle/command_t
+	url = git://github.com/wincent/Command-T.git

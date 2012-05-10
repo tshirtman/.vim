@@ -87,8 +87,8 @@ noremap [1;5C :bn!<CR>
 " ctrl-t to open new tab
 noremap  <leader>t
 
-" hide hl and signs on ctrl-l
-nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
+" hide hl and signs on ctrl-l, hide quickfixes
+nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR>:lcl<CR><C-l>
 
 " reverse two words (the one under cursor with the next one) with gw in normal
 " mode

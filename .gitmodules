@@ -61,3 +61,6 @@
 [submodule "bundle/yank-ring"]
 	path = bundle/yank-ring
 	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/obviousmode"]
+	path = bundle/obviousmode
+	url = https://github.com/bsl/obviousmode.git

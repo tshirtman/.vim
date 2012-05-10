@@ -1,3 +1,14 @@
+" MASOCHIST anti-arrows experiment
+inoremap <right> <nop>
+inoremap <left> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+noremap <right> <nop>
+noremap <left> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+" /MASOCHIST
+
 if has("win32")
 	" fix pathogen
 	let $VIMHOME=expand('<sfile>:p:h:h')

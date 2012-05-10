@@ -17,6 +17,7 @@ if has("win32")
 	let $VIMHOME=expand('<sfile>:p:h:h')
 	so $VIMHOME\_vim\autoload\pathogen.vim
 	call pathogen#infect('$VIMHOME\_vim\bundle')
+	call pathogen#helptags()
 	" fix backspace in insert mode, remember, we are on windows, we need twice the BS :P
 	se bs=2
 endif
@@ -42,11 +43,12 @@ set scrolloff=2
 set incsearch
 set ignorecase
 set smartcase
-set autowrite
-set showtabline=2
+"set autowrite
+"set showtabline=2
 set laststatus=2
 set showcmd
-set nohidden
+"set nohidden
+set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.
 
@@ -71,16 +73,19 @@ map <S-tab> <<
 vmap <tab> >gv
 vmap <S-tab> <gv
 
-"use ctrl -> and ctrl <- to navigate between tabs
-noremap <C-Left> gT
-noremap <C-Right> gt
+""use ctrl -> and ctrl <- to navigate between tabs
+"noremap <C-Left> gT
+"noremap <C-Right> gt
+"use ctrl -> and ctrl <- to navigate between buffers
+noremap <C-Left> :bp!<CR>
+noremap <C-Right> :bn!<CR>
 
 " same, but on hosts with weird keymap issues
-noremap [1;5D gT
-noremap [1;5C gt
+noremap [1;5D :bp!<CR>
+noremap [1;5C :bn!<CR>
 
 " ctrl-t to open new tab
-noremap  :tabnew 
+noremap  <leader>t
 
 " hide hl and signs on ctrl-l
 nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>

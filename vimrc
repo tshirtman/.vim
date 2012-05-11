@@ -51,6 +51,8 @@ set showcmd
 set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.
+" use a seperate file to store history, so it works cross-sessionistory, so it works cross-sessions
+set undofile
 
 " cool trick to insert dates
 iab <expr> isodate strftime("%Y-%m-%d")
@@ -87,8 +89,8 @@ noremap [1;5C :bn!<CR>
 " ctrl-t to open new tab
 noremap  <leader>t
 
-" hide hl and signs on ctrl-l
-nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
+" hide hl and signs on ctrl-l, hide quickfixes
+nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR>:lcl<CR><C-l>
 
 " reverse two words (the one under cursor with the next one) with gw in normal
 " mode

@@ -110,11 +110,6 @@ ab GPL_LICENSE #################################################################
 " mapping to Todo List pluggin toggle
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
 " auto loading of template files for various programming language at file
 " creation
 " When editing a new file, load skeleton if any.
@@ -358,3 +353,6 @@ let g:pymode_syntax_highlight_exceptions = g:pymode_syntax_all
 " For fast machines
 let g:pymode_syntax_slow_sync = 0
 
+" don't use tab for snippets since it's the autocomplete key
+"let g:snips_trigger_key = ""
+"let g:snips_trigger_key_backwards = "::"

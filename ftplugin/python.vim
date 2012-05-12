@@ -95,9 +95,6 @@ EOF
 autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-source ~/.vim/bundle/pycomplexity/complexity.vim
-nmap Q :cal ShowComplexity()<CR>
-
 " fix completion for virtualenv modules!
 py << EOF
 import os.path

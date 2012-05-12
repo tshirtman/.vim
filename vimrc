@@ -112,29 +112,6 @@ ab GPL_LICENSE #################################################################
 " mapping to Todo List pluggin toggle
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-" this function will delete a swapfile without asking if the file is newer
-" than the swapfile, else, auto recover, either there are changes to recover,
-" or it doesn't change anything (and it will be deleted next start)
-function! CheckSwapfile()
-python << endpython
-import vim
-import os
-
-swapfilename = vim.eval('v:swapname')
-filename = vim.eval('expand("<afile>")')
-
-if os.stat(filename).st_ctime > os.stat(swapfilename).st_ctime:
-    vim.command("let v:swapchoice='d'")
-
-else:
-    vim.command("let v:swapchoice='r'")
-
-endpython
-endfunction
-
-" bind CheckSwapfile function to SwapExists
-autocmd SwapExists * call CheckSwapfile()
-
 "hide passwords when editing (you can use select mode to see it), doesn't work
 "with all terminal types, but useful
 hi Password ctermfg=black ctermbg=black cterm=NONE guifg=black guibg=black 

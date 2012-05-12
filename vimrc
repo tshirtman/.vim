@@ -61,6 +61,9 @@ iab <expr> frdate strftime("%d/%m/%Y")
 " use ack-grep
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+" change ctrl-p shortcut because of conflict with replace paste
+let g:ctrlp_map = '<c-b>'
+
 " easier to type than \
 let mapleader = ";"
 

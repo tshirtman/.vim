@@ -58,8 +58,14 @@ set undofile
 iab <expr> isodate strftime("%Y-%m-%d")
 iab <expr> frdate strftime("%d/%m/%Y")
 
+" use ack-grep
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " easier to type than \
 let mapleader = ";"
+
+" use bépo for lustyjuggler
+let g:LustyJugglerKeyboardLayout = "bépo"
 
 " save session and all files and exit with f4, use vim -S in same directory to restore
 map <F4> :tabdo lcl<CR>:wa <CR>:mksession!<CR>:xa<CR>
@@ -88,6 +94,9 @@ noremap [1;5C :bn!<CR>
 
 " ctrl-t to open new tab
 noremap  <leader>t
+
+" close buffer on leader-q
+noremap <leader>q :bd<CR>
 
 " hide hl and signs on ctrl-l, hide quickfixes
 nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR>:lcl<CR><C-l>

@@ -10,15 +10,14 @@ swapfilename = vim.eval('v:swapname')
 filename = vim.eval('expand("<afile>")')
 
 if os.stat(filename).st_ctime > os.stat(swapfilename).st_ctime:
-    return 'd'
-    #vim.command("let v:swapchoice='d'")
+    vim.command("let v:swapchoice='d'")
 
-    #else:
-    #    vim.command("let v:swapchoice='r'")
+else:
+    vim.command("let v:swapchoice='r'")
 
 endpython
 endfunction
 
 " bind CheckSwapfile function to SwapExists
-autocmd SwapExists * let v:swapchoice = CheckSwapfile()
+autocmd SwapExists * call CheckSwapfile()
 

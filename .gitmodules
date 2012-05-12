@@ -73,6 +73,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/lusty-jugler-bépo"]
-	path = bundle/lusty-jugler-bépo
-	url = git@github.com:tshirtman/LustyJuggler.git
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = git@github.com:tshirtman/lusty.git

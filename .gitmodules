@@ -25,9 +25,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = http://github.com/mattn/zencoding-vim
-[submodule "bundle/ColorV"]
-	path = bundle/ColorV
-	url = https://github.com/Rykka/ColorV/
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
@@ -76,3 +73,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/colorv"]
+	path = bundle/colorv
+	url = https://github.com/vim-scripts/colorv.vim.git

@@ -17,7 +17,6 @@ if has("win32")
 	let $VIMHOME=expand('<sfile>:p:h:h')
 	so $VIMHOME\_vim\autoload\pathogen.vim
 	call pathogen#infect('$VIMHOME\_vim\bundle')
-	call pathogen#helptags()
 	" fix backspace in insert mode, remember, we are on windows, we need twice the BS :P
 	se bs=2
 endif
@@ -26,6 +25,7 @@ syntax on
 filetype plugin indent on
 
 call pathogen#infect()
+call pathogen#helptags()
 
 set encoding&		" terminal charset: follows current locale
 set termencoding=
@@ -53,6 +53,9 @@ set autoread
 set clipboard+=unnamed " system clipboard as default register.
 " use a seperate file to store history, so it works cross-sessionistory, so it works cross-sessions
 set undofile
+
+" ignore common non-editable files in projects
+set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo
 
 " cool trick to insert dates
 iab <expr> isodate strftime("%Y-%m-%d")

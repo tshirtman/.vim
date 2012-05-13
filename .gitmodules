@@ -75,4 +75,4 @@
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/colorv"]
 	path = bundle/colorv
-	url = https://github.com/vim-scripts/colorv.vim.git
+	url = https://github.com/tshirtman/colorv.vim.git

@@ -76,3 +76,6 @@
 [submodule "bundle/colorv"]
 	path = bundle/colorv
 	url = https://github.com/tshirtman/colorv.vim.git
+[submodule "bundle/tasklist"]
+	path = bundle/tasklist
+	url = https://github.com/vim-scripts/TaskList.vim.git

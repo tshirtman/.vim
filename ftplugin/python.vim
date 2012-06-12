@@ -16,8 +16,8 @@ let python_highlight_all = 1
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
-set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
+"set omnifunc=pythoncomplete#Complete
+"let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 inoremap <Nul> <C-x><C-o>
 

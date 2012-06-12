@@ -50,12 +50,16 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " change ctrl-p shortcut because of conflict with replace paste
 let g:ctrlp_map = '<c-b>'
+let g:ctrlp_max_height = 100
 
 " easier to type than \
-let mapleader = ";"
+let mapleader = ","
 
 " use bépo for lustyjuggler
 let g:LustyJugglerKeyboardLayout = "bépo"
+
+map é h
+map è l
 
 " f5/F6, better to use nerdcommenter
 map <F5> <leader>cc

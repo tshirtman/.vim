@@ -17,11 +17,13 @@ let g:pymode_run = 1
 let g:pymode_run_key = '<leader>r'
 
 " Load pylint code plugin
-let g:pymode_lint = 0
+let g:pymode_lint = 1
+
+let g:pymode_lint_hold = 0
 
 " Switch pylint or pyflakes code checker
 " values (pylint, pyflakes)
-let g:pymode_lint_checker = "pylint"
+let g:pymode_lint_checker = "pep8,pyflakes,mccab"
 
 " Pylint configuration file
 " If file not found use 'pylintrc' from python-mode plugin directory
@@ -30,7 +32,7 @@ let g:pymode_lint_config = "$HOME/.pylintrc"
 " Check code every save
 let g:pymode_lint_write = 1
 
-" Auto open cwindow if errors be finded
+" Auto open cwindow if errors are found
 let g:pymode_lint_cwindow = 1
 
 " Auto jump on first error
@@ -79,7 +81,7 @@ let g:pymode_rope_guess_project = 1
 
 let g:pymode_rope_goto_def_newwin = 0
 
-let g:pymode_rope_always_show_complete_menu = 0
+let g:pymode_rope_always_show_complete_menu = 1
 
 " Load python objects and motion
 let g:pymode_motion = 1
@@ -100,7 +102,7 @@ let g:pymode_virtualenv = 1
 let g:pymode_options_indent = 1
 
 " Set default pymode python fold options
-let g:pymode_options_fold = 1
+let g:pymode_folding = 0
 
 " Set default pymode python other options
 let g:pymode_options_other = 1
@@ -142,7 +144,7 @@ let g:pymode_syntax_builtin_funcs = g:pymode_syntax_all
 let g:pymode_syntax_highlight_exceptions = g:pymode_syntax_all
 
 " For fast machines
-let g:pymode_syntax_slow_sync = 0
+let g:pymode_syntax_slow_sync = 1
 
 " don't use tab for snippets since it's the autocomplete key
 "let g:snips_trigger_key = ""

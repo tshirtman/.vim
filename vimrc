@@ -61,10 +61,6 @@ let g:LustyJugglerKeyboardLayout = "bépo"
 map é h
 map è l
 
-" f5/F6, better to use nerdcommenter
-map <F5> <leader>cc
-map <F6> <leader>cu
-
 " use tab to indent/unindent text or selected text
 map <tab> >>
 map <S-tab> <<
@@ -101,10 +97,7 @@ let g:xml_syntax_folding=1
 map <leader>sf :setlocal spell spelllang=fr<CR>
 map <leader>se :setlocal spell spelllang=en_US<CR>
 
-nnoremap <F9> :GundoToggle<CR>
-
-" mapping to Tag List pluggin toggle
-nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <leader>gg :GundoToggle<CR>
 
 if has('gui_running')
 	set guioptions=

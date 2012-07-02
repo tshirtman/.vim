@@ -69,7 +69,7 @@
 	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/lusty"]
 	path = bundle/lusty
-	url = git@github.com:tshirtman/lusty.git
+	url = http://github.com/tshirtman/lusty.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git

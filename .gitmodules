@@ -76,3 +76,6 @@
 [submodule "bundle/tasklist"]
 	path = bundle/tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule "bundle/vim-multiedit"]
+	path = bundle/vim-multiedit
+	url = https://github.com/tshirtman/vim-multiedit.git

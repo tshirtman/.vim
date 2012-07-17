@@ -41,6 +41,8 @@ set undofile
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo
 
+set relativenumber
+
 " cool trick to insert dates
 iab <expr> isodate strftime("%Y-%m-%d")
 iab <expr> frdate strftime("%d/%m/%Y")
@@ -106,3 +108,4 @@ else
         set t_Co=256
 endif
 
+let g:multiedit_nomappings=1

@@ -64,6 +64,9 @@ map é w
 map è l
 map È h
 
+" easier mapping to switch to alternate buffer (ctrl-^)
+map <leader>; 
+
 " use tab to indent/unindent text or selected text
 map <tab> >>
 map <S-tab> <<

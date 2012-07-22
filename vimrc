@@ -23,7 +23,7 @@ set syntax=auto
 set number
 set autoindent
 set hlsearch
-set scrolloff=2
+set scrolloff=999
 set incsearch
 set ignorecase
 set smartcase
@@ -39,7 +39,7 @@ set clipboard+=unnamed " system clipboard as default register.
 set undofile
 
 " ignore common non-editable files in projects
-set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo
+set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
 set relativenumber
 
@@ -60,8 +60,9 @@ let mapleader = ","
 " use bépo for lustyjuggler
 let g:LustyJugglerKeyboardLayout = "bépo"
 
-map é h
+map é w
 map è l
+map È h
 
 " use tab to indent/unindent text or selected text
 map <tab> >>

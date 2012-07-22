@@ -94,8 +94,10 @@ nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR>:only<CR><C-l>
 " mode
 nmap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
 
-" use enter in normal mode to insert empty lines
+" use enter in normal mode to insert empty lines, not in cmd windows
 nmap <CR> o<ESC>
+au CmdwinEnter * nnoremap <cr> <cr>
+au CmdwinLeave * nnoremap <cr> o<esc>
 
 let g:xml_syntax_folding=1
 

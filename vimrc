@@ -65,7 +65,7 @@ map è l
 map È h
 
 " easier mapping to switch to alternate buffer (ctrl-^)
-map <leader>; 
+map _ <c-^>
 
 " use tab to indent/unindent text or selected text
 map <tab> >>
@@ -115,3 +115,24 @@ else
 endif
 
 let g:multiedit_nomappings=1
+
+" these keys are free to map, think about them if needed
+" map \
+" map ç
+" map æ
+" map ù
+" map €
+" map þ
+" map ß
+" map ð
+" map ə
+" map …
+" map ¿
+" map µ
+" map †
+" map —
+" map ±
+" map −
+" map ÷
+" map ×
+" map ≠

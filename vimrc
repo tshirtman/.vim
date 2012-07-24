@@ -1,3 +1,7 @@
+" cleanup autocommands to avoid slowdown on .vimrc reloads
+au!
+
+" try to use jj instead of esc
 inoremap jj <ESC>
 
 if has("win32")
@@ -136,3 +140,9 @@ let g:multiedit_nomappings=1
 " noremap ÷
 " noremap ×
 " noremap ≠
+
+" auto reload .vimrc when i exit it
+au BufWritePost $MYVIMRC sil so $MYVIMRC | syn on
+
+" easy opening of .vimrc
+noremap <leader>ev :split $MYVIMRC<cr>

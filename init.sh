@@ -4,6 +4,8 @@
 git submodule init
 git submodule update
 
+mkdir -p undofiles
+
 while true
 do
 read -p "do you want to link vimrc to ~/.vimrc (Y/N)" yn

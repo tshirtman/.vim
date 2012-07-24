@@ -70,6 +70,9 @@ noremap È h
 " easier mapping to switch to alternate buffer (ctrl-^)
 nnoremap _ <c-^>
 
+" easy switch number/rel
+noremap <silent> <leader>n :call NumbersToggle()<cr>
+
 " use tab to indent/unindent text or selected text
 nnoremap <tab> >>
 nnoremap <S-tab> <<

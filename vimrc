@@ -31,16 +31,15 @@ set scrolloff=999
 set incsearch
 set ignorecase
 set smartcase
-"set autowrite
-"set showtabline=2
 set laststatus=2
 set showcmd
-"set nohidden
 set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.
+
 " use a seperate file to store history, so it works cross-session
 set undofile
+set undodir=$HOME/.vim/undofiles
 
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un

@@ -60,18 +60,18 @@ let mapleader = ","
 " use bépo for lustyjuggler
 let g:LustyJugglerKeyboardLayout = "bépo"
 
-map é w
-map è l
-map È h
+noremap é w
+noremap è l
+noremap È h
 
 " easier mapping to switch to alternate buffer (ctrl-^)
-map _ <c-^>
+nnoremap _ <c-^>
 
 " use tab to indent/unindent text or selected text
-map <tab> >>
-map <S-tab> <<
-vmap <tab> >gv
-vmap <S-tab> <gv
+nnoremap <tab> >>
+nnoremap <S-tab> <<
+vnoremap <tab> >gv
+vnoremap <S-tab> <gv
 
 ""use ctrl -> and ctrl <- to navigate between tabs
 "noremap <C-Left> gT
@@ -92,18 +92,18 @@ nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR>:only<CR><C-l>
 
 " reverse two words (the one under cursor with the next one) with gw in normal
 " mode
-nmap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
+nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
 
 " use enter in normal mode to insert empty lines, not in cmd windows
-nmap <CR> o<ESC>
+noremap <CR> o<ESC>
 au CmdwinEnter * nnoremap <cr> <cr>
 au CmdwinLeave * nnoremap <cr> o<esc>
 
 let g:xml_syntax_folding=1
 
 " trigger french or english spell correction
-map <leader>sf :setlocal spell spelllang=fr<CR>
-map <leader>se :setlocal spell spelllang=en_US<CR>
+nnoremap <leader>sf :setlocal spell spelllang=fr<CR>
+nnoremap <leader>se :setlocal spell spelllang=en_US<CR>
 
 nnoremap <leader>gg :GundoToggle<CR>
 
@@ -117,22 +117,22 @@ endif
 let g:multiedit_nomappings=1
 
 " these keys are free to map, think about them if needed
-" map \
-" map ç
-" map æ
-" map ù
-" map €
-" map þ
-" map ß
-" map ð
-" map ə
-" map …
-" map ¿
-" map µ
-" map †
-" map —
-" map ±
-" map −
-" map ÷
-" map ×
-" map ≠
+" noremap \
+" noremap ç
+" noremap æ
+" noremap ù
+" noremap €
+" noremap þ
+" noremap ß
+" noremap ð
+" noremap ə
+" noremap …
+" noremap ¿
+" noremap µ
+" noremap †
+" noremap —
+" noremap ±
+" noremap −
+" noremap ÷
+" noremap ×
+" noremap ≠

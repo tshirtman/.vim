@@ -17,8 +17,8 @@ endif
 syntax on
 filetype plugin indent on
 
-call pathogen#infect()
-call pathogen#helptags()
+silent! call pathogen#infect()
+silent! call pathogen#helptags()
 
 set ruler
 set wildmenu
@@ -38,13 +38,21 @@ set autoread
 set clipboard+=unnamed " system clipboard as default register.
 
 " use a seperate file to store history, so it works cross-session
-set undofile
-set undodir=$HOME/.vim/undofiles
+if has('undofile')
+  set undofile
+  set undodir=$HOME/.vim/undofiles
+else
+  echom "no undofiles"
+endif
 
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
-set relativenumber
+if has('undofile')
+  set relativenumber
+else
+  echom "no relativenumbers"
+endif
 
 " cool trick to insert dates
 iab <expr> isodate strftime("%Y-%m-%d")

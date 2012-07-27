@@ -1,8 +1,12 @@
 " cleanup autocommands to avoid slowdown on .vimrc reloads
 au!
 
+
 " try to use jj instead of esc
 inoremap jj <ESC>
+
+" noesc, use jj or <c-c>
+inoremap <esc> <nop>
 
 if has("win32")
 	" fix pathogen

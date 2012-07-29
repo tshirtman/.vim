@@ -42,7 +42,7 @@ set autoread
 set clipboard+=unnamed " system clipboard as default register.
 
 " use a seperate file to store history, so it works cross-session
-if has('undofile')
+if exists('&undofile')
   set undofile
   set undodir=$HOME/.vim/undofiles
 else
@@ -52,7 +52,7 @@ endif
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
-if has('undofile')
+if exists('&relativenumber')
   set relativenumber
 else
   echom "no relativenumbers"

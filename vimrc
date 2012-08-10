@@ -58,6 +58,10 @@ else
   echom "no relativenumbers"
 endif
 
+if executable("par")
+    set formatprg=par
+endif
+
 " cool trick to insert dates
 iab <expr> isodate strftime("%Y-%m-%d")
 iab <expr> frdate strftime("%d/%m/%Y")

@@ -76,6 +76,9 @@ let g:ctrlp_max_height = 100
 " easier to type than \
 let mapleader = ","
 
+" I NEVER use U original behaviour, lets use it for c-r
+noremap U <c-r>
+
 " use bépo for lustyjuggler
 let g:LustyJugglerKeyboardLayout = "bépo"
 

@@ -89,6 +89,9 @@ noremap È h
 " easier mapping to switch to alternate buffer (ctrl-^)
 nnoremap _ <c-^>
 
+" easier windows moves
+nnoremap € <c-w><c-w>
+
 " easy switch number/rel
 noremap <silent> <leader>n :call NumbersToggle()<cr>
 

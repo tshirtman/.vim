@@ -144,6 +144,9 @@ endif
 
 let g:multiedit_nomappings=1
 
+
+noremap <Leader>T <Plug>TaskList
+
 " these keys are free to map, think about them if needed
 " noremap \
 " noremap ç

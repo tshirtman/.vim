@@ -126,3 +126,6 @@
 	ignore = dirty
 	path = bundle/vim-cython
 	url = git@github.com:tshirtman/vim-cython.git
+[submodule "bundle/rainbow_parenthesis"]
+	path = bundle/rainbow_parenthesis
+	url = https://github.com/kien/rainbow_parentheses.vim.git

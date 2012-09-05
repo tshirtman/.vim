@@ -9,20 +9,18 @@ autocmd BufNewFile *
         \ if !ext |
         \   let ext = expand("%") |
         \ endif |
-	\ let skel = $HOME . "/.vim/skeletons/skel." . ext |
-	\ if filereadable(skel) |
-	\   execute "silent! 0read " . skel |
-	\   let fn = expand("%") |
-	\   let hn = substitute(expand("%"), "\\w", "\\u\\0", "g") |
-	\   let hn = substitute(hn, "\\.", "_", "g") |
-	\   let hn = substitute(hn, "/", "_", "g") |
-	\   let cn = expand("%:t:r") |
-	\   %s/<+FILENAME+>/\=fn/Ige |
-	\   %s/<+HEADERNAME+>/\=hn/Ige |
-	\   %s/<+CLASSNAME+>/\=cn/Ige |
-	\   unlet fn hn cn |
-	\ endif |
-	\ unlet skel |
-	\ goto 
-
-
+        \ let skel = $HOME . "/.vim/skeletons/skel." . ext |
+        \ if filereadable(skel) |
+        \   execute "silent! 0read " . skel |
+        \   let fn = expand("%") |
+        \   let hn = substitute(expand("%"), "\\w", "\\u\\0", "g") |
+        \   let hn = substitute(hn, "\\.", "_", "g") |
+        \   let hn = substitute(hn, "/", "_", "g") |
+        \   let cn = expand("%:t:r") |
+        \   %s/<+FILENAME+>/\=fn/Ige |
+        \   %s/<+HEADERNAME+>/\=hn/Ige |
+        \   %s/<+CLASSNAME+>/\=cn/Ige |
+        \   unlet fn hn cn |
+        \ endif |
+        \ unlet skel |
+        \ goto

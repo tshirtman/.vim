@@ -127,14 +127,18 @@
 	path = bundle/vim-cython
 	url = git@github.com:tshirtman/vim-cython.git
 [submodule "bundle/rainbow_parenthesis"]
+	ignore = dirty
 	path = bundle/rainbow_parenthesis
 	url = https://github.com/kien/rainbow_parentheses.vim.git
 [submodule "bundle/vim-surround"]
+	ignore = dirty
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-repeat"]
+	ignore = dirty
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/dwm.vim"]
+	ignore = dirty
 	path = bundle/dwm.vim
 	url = https://github.com/spolu/dwm.vim.git

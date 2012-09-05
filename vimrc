@@ -100,17 +100,6 @@ nnoremap <S-tab> <<
 vnoremap <tab> >gv
 vnoremap <S-tab> <gv
 
-""use ctrl -> and ctrl <- to navigate between tabs
-"noremap <C-Left> gT
-"noremap <C-Right> gt
-"use ctrl -> and ctrl <- to navigate between buffers
-noremap <C-Left> :bp!<CR>
-noremap <C-Right> :bn!<CR>
-
-" same, but on hosts with weird keymap issues
-noremap [1;5D :bp!<CR>
-noremap [1;5C :bn!<CR>
-
 " close buffer on leader-q
 noremap <leader>q :bd<CR>
 

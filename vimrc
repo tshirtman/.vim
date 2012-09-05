@@ -103,12 +103,8 @@ vnoremap <S-tab> <gv
 " close buffer on leader-q
 noremap <leader>q :bd<CR>
 
-" hide hl and signs on ctrl-l, hide quickfixes
-nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR>:only<CR><C-l>
-
-" reverse two words (the one under cursor with the next one) with gw in normal
-" mode
-nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr>:nohl<cr><c-o>
+" hide hl and signs on ctrl-l
+nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
 
 " use enter in normal mode to insert empty lines, not in cmd windows
 noremap <CR> o<ESC>
@@ -135,11 +131,12 @@ let g:multiedit_nomappings=1
 
 noremap <Leader>T <Plug>TaskList
 
+noremap æ :SidewaysLeft<cr>
+noremap ù :SidewaysRight<cr>
+
 " these keys are free to map, think about them if needed
 " noremap \
 " noremap ç
-" noremap æ
-" noremap ù
 " noremap €
 " noremap þ
 " noremap ß

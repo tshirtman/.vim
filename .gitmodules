@@ -142,3 +142,7 @@
 	ignore = dirty
 	path = bundle/dwm.vim
 	url = https://github.com/spolu/dwm.vim.git
+[submodule "bundle/sideways.vim"]
+	ignore = dirty
+	path = bundle/sideways.vim
+	url = https://github.com/AndrewRadev/sideways.vim.git

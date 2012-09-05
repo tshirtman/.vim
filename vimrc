@@ -189,3 +189,6 @@ function! MouseToggle()
 endfunction
 
 noremap <leader>m :call MouseToggle()<cr>
+
+" yankring mappings
+let g:yankring_replace_n_nkey = '<c-é>'

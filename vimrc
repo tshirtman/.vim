@@ -1,13 +1,6 @@
 " cleanup autocommands to avoid slowdown on .vimrc reloads
 au!
 
-" autoloat RainbowParenthesis
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
-
 " try to use jj instead of esc
 inoremap jj <ESC>
 

@@ -146,3 +146,7 @@
 	ignore = dirty
 	path = bundle/sideways.vim
 	url = https://github.com/AndrewRadev/sideways.vim.git
+[submodule "bundle/inline_edit"]
+	ignore = dirty
+	path = bundle/inline_edit
+	url = git://github.com/AndrewRadev/inline_edit.vim.git

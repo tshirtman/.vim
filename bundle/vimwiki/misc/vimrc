@@ -1,0 +1,31 @@
+set background=dark
+
+
+" There options are required by vimwiki.
+set nocompatible
+filetype plugin on
+syntax on
+
+" Load only system and vimwiki's scripts.
+set runtimepath=src,$VIMRUNTIME
+
+" Build help tags.
+helptags src/doc
+
+" Use directories within 'test' for storing wiki and html.
+let g:vimwiki_list = [
+\	{'path': getcwd().'/misc', 'path_html': getcwd().'/misc/html',
+\    'css_name': getcwd().'/src/autoload/vimwiki/style.css'}
+\]
+
+
+" Replace VIMWIKIHOME and generate html
+function! VimwikiMisc2Html() "{{{
+  execute '%s/VIMWIKIHOME/\=getcwd()[1 :]/ge'
+  execute 'normal \wh'
+  execute 'normal u'
+  execute 'wq'
+endfunction "}}}
+command -nargs=0 VimwikiMisc2Html call VimwikiMisc2Html()
+
+

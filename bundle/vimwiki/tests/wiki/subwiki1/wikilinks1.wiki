@@ -1,0 +1,54 @@
+%toc
+= Wikilinks =
+
+ # [[PageTwo]] 
+ # [[PageThree]] 
+
+= Wikilinks With |-Separator =
+
+These syntaxes only work when 'link_separator' == '|'
+
+ # [[PageTwo|Page Two]]
+ # [[PageThree|Page Three]] 
+
+= Wikilinks To Local Resources =
+
+ # [[../headers]] : Highlighted as link
+ # [[../blockquote]] : Highlighted as link
+ # [[../missing]] : Highlighted as missing-link
+ # [[subsubwiki1/]]  : Highlighted as link
+ # [[subsubwiki1/wikilinks11]]  : Highlighted as link
+ # [[subsubwiki1/wikilinks12]]  : Highlighted as missing-link
+ # [[../subwiki2/]]  : Highlighted as link
+ # [[../subwiki2/wikilinks2]]  : Highlighted as link
+ # [[../subwiki2/wikilinks1]]  : Highlighted as missing-link
+
+= Wiki directories =
+
+ # [[./subsubwiki1/]]  : Highlighted as missing-link (?) (non-reduced path)
+ # [[subsubwiki2/]]  : Highlighted as link
+ # [[../subwiki2/]]  : Highlighted as link
+ # [[..\subwiki2/]] : nonstandard path too highlighted as link
+ # [[..\subwiki2\]] : nonstandard path too highlighted as link
+ # [[../wiki/]] : Highlighted as missing-link
+ # [[../../wiki/]]  : Highlighted as missing-link (the path leaves the wiki)
+ # [[./]]  : Highlighted as link
+ # [[a/]]  : Highlighted as missing-link
+ # [[../]] : Highlighted as link
+ # [[..\]] : nonstandard path too highlighted as link
+ # [[../../]] : Highlighted as missing-link
+
+= Wikilinks To Non-Wiki Local Resources =
+
+ # [[Path/To/Nowhere.txt]] : Highlighted as missing-link.  Schemeless URLs are equivalent to wiki-scheme URLs, which are fixed with an .html extension
+ # [[file:///Absolute/Path/To/Nowhere.txt]] : Always highlight absolute paths as links.  No .html extension added
+ %% # [[wiki0:Path/To/Nowhere.txt]] : Always highlight local paths as links.  No .html extension added
+ %% # [[local:../headers.wiki]] : Highlighted as link
+
+= Wikilinks To Urls =
+
+ # [[http://github.com]] : Highlighted as link
+ # [[file:///Users/stu/Downloads/2011-11-22-FlashReport_11_22_11.fin.pdf]] : Highlighted as link
+
+= Diary Scheme =
+ # [[diary:2012-05-22]]

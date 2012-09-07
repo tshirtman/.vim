@@ -1,0 +1,25 @@
+%toc
+= Wikilinks =
+ # [[wikilinks21]] : Highlighted as link
+ # [[wikilinks12]] : Highlighted as missing-link
+ # [[../wikilinks1]] : Highlighted as link
+ # [[../subsubwiki1/wikilinks11]] : Highlighted as link
+ # [[../subsubwiki1/wikilinks12]] : Highlighted as missing-link
+ # [[../subsubwiki2/wikilinks21]] : Highlighted as missing-link
+ # [[../../headers]] : Highlighted as link
+ # [[../../missing]] : Highlighted as missing-link
+
+= Wiki directories =
+ # [[../subsubwiki1/]]  : Highlighted as link
+ # [[./]]  : Highlighted as link
+ # [[../subsubwiki2/]]  : Highlighted as missing-link (non-reduced path)
+ # [[../../subwiki2/]]  : Highlighted as link
+ # [[../wiki/]] : Highlighted as missing-link
+
+= Wikilinks To Non-Wiki Local Resources =
+
+ # [[Path/To/Nowhere.txt]] : Highlighted as missing-link.  Schemeless URLs are equivalent to wiki-scheme URLs, which are fixed with an .html extension
+ # [[file:///Absolute/Path/To/Nowhere.txt]] : Always highlight absolute paths as links.  No .html extension added
+ %% # [[wiki0:Path/To/Nowhere.txt]] : Always highlight local paths as links.  No .html extension added
+
+

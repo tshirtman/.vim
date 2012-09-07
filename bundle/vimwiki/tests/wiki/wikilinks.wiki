@@ -1,0 +1,48 @@
+%toc
+= Wikilinks =
+
+ # [[PageTwo]] 
+ # [[PageThree]] 
+
+= Wikilinks With |-Separator =
+
+These syntaxes only work when 'link_separator' == '|'
+
+ # [[PageTwo|Page Two]]
+ # [[PageThree|Page Three]] 
+
+= Wikilinks To Local Resources =
+
+ # [[headers]] : Highlighted as link
+ # [[blockquote]] : Highlighted as link
+ # [[missing]] : Highlighted as missing-link
+ # [[subwiki1/wikilinks1]] : Highlighted as link
+ # [[subwiki1/wikilinks2]] : Highlighted as missing-link
+ # [[subwiki2/wikilinks2]] : Highlighted as link
+ # [[subwiki2/wikilinks1]] : Highlighted as missing-link
+
+= Wiki Directories =
+
+ # [[./]] : Highlighted as link
+ # [[subwiki1/]] : Highlighted as link
+ # [[subwiki1/subsubwiki2/]] : Highlighted as link
+ # [[diary/]]  : Highlighted as missing-link
+ # [[../wiki/]] : Highlighted as missing-link
+ # [[../]] : Highlighted as missing-link
+
+= Wikilinks To Non-Wiki Local Resources =
+
+ # [[Path/To/Nowhere.txt]] : Highlighted as missing-link.  Schemeless URLs are equivalent to wiki-scheme URLs, which are fixed with an .html extension
+ # [[file:///Absolute/Path/To/Nowhere.txt]] : Always highlight absolute paths as links.  No .html extension added
+ %% # [[wiki0:Path/To/Nowhere.txt]] : Always highlight local paths as links.  No .html extension added
+
+= Wikilinks To Urls =
+
+ # [[http://github.com]] : Highlighted as link
+ # [[file:///Users/stu/Downloads/2011-11-22-FlashReport_11_22_11.fin.pdf]] : Highlighted as link
+
+= Diary Scheme =
+ # [[diary:2012-05-22]]
+
+= With special symbols =
+ # [[https://hello#world.com]]

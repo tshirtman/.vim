@@ -1,0 +1,140 @@
+
+<div class="toc">
+<ul>
+<li><a href="#toc_1">Wikilinks</a>
+<li><a href="#toc_2">Wikilinks With |-Separator</a>
+<li><a href="#toc_3">Wikilinks To Local Resources</a>
+<li><a href="#toc_4">Wiki directories</a>
+<li><a href="#toc_5">Wikilinks To Non-Wiki Local Resources</a>
+<li><a href="#toc_6">Wikilinks To Urls</a>
+<li><a href="#toc_7">Diary Scheme</a>
+</ul>
+</div>
+<h1 id="toc_1">Wikilinks</h1>
+
+<ol>
+<li>
+<a href="PageTwo.html">PageTwo</a> 
+
+<li>
+<a href="PageThree.html">PageThree</a> 
+
+</ol>
+
+<h1 id="toc_2">Wikilinks With |-Separator</h1>
+
+<p>
+These syntaxes only work when 'link_separator' == '|'
+</p>
+
+<ol>
+<li>
+<a href="PageTwo.html">Page Two</a>
+
+<li>
+<a href="PageThree.html">Page Three</a> 
+
+</ol>
+
+<h1 id="toc_3">Wikilinks To Local Resources</h1>
+
+<ol>
+<li>
+<a href="../headers.html">../headers</a> : Highlighted as link
+
+<li>
+<a href="../blockquote.html">../blockquote</a> : Highlighted as link
+
+<li>
+<a href="../missing.html">../missing</a> : Highlighted as missing-link
+
+<li>
+<a href="subsubwiki1/">subsubwiki1/</a>  : Highlighted as link
+
+<li>
+<a href="subsubwiki1/wikilinks11.html">subsubwiki1/wikilinks11</a>  : Highlighted as link
+
+<li>
+<a href="subsubwiki1/wikilinks12.html">subsubwiki1/wikilinks12</a>  : Highlighted as missing-link
+
+<li>
+<a href="../subwiki2/">../subwiki2/</a>  : Highlighted as link
+
+<li>
+<a href="../subwiki2/wikilinks2.html">../subwiki2/wikilinks2</a>  : Highlighted as link
+
+<li>
+<a href="../subwiki2/wikilinks1.html">../subwiki2/wikilinks1</a>  : Highlighted as missing-link
+
+</ol>
+
+<h1 id="toc_4">Wiki directories</h1>
+
+<ol>
+<li>
+<a href="./subsubwiki1/">./subsubwiki1/</a>  : Highlighted as missing-link (?) (non-reduced path)
+
+<li>
+<a href="subsubwiki2/">subsubwiki2/</a>  : Highlighted as link
+
+<li>
+<a href="../subwiki2/">../subwiki2/</a>  : Highlighted as link
+
+<li>
+[[..\subwiki2/]] : nonstandard path too highlighted as link
+
+<li>
+[[..\subwiki2\]] : nonstandard path too highlighted as link
+
+<li>
+<a href="../wiki/">../wiki/</a> : Highlighted as missing-link
+
+<li>
+<a href="../../wiki/">../../wiki/</a>  : Highlighted as missing-link (the path leaves the wiki)
+
+<li>
+<a href="./">./</a>  : Highlighted as link
+
+<li>
+<a href="a/">a/</a>  : Highlighted as missing-link
+
+<li>
+<a href="../">../</a> : Highlighted as link
+
+<li>
+[[..\]] : nonstandard path too highlighted as link
+
+<li>
+<a href="../../">../../</a> : Highlighted as missing-link
+
+</ol>
+
+<h1 id="toc_5">Wikilinks To Non-Wiki Local Resources</h1>
+
+<ol>
+<li>
+<a href="Path/To/Nowhere.txt.html">Path/To/Nowhere.txt</a> : Highlighted as missing-link.  Schemeless URLs are equivalent to wiki-scheme URLs, which are fixed with an .html extension
+
+<li>
+<a href="file:///Absolute/Path/To/Nowhere.txt">file:///Absolute/Path/To/Nowhere.txt</a> : Always highlight absolute paths as links.  No .html extension added
+
+</ol>
+
+<h1 id="toc_6">Wikilinks To Urls</h1>
+
+<ol>
+<li>
+<a href="http://github.com">http://github.com</a> : Highlighted as link
+
+<li>
+<a href="file:///Users/stu/Downloads/2011-11-22-FlashReport_11_22_11.fin.pdf">file:///Users/stu/Downloads/2011-11-22-FlashReport_11_22_11.fin.pdf</a> : Highlighted as link
+
+</ol>
+
+<h1 id="toc_7">Diary Scheme</h1>
+<ol>
+<li>
+<a href="../diary/2012-05-22.html">diary:2012-05-22</a>
+
+</ol>
+

@@ -1,0 +1,32 @@
+Inlined preformatted {{{text with curly}}} braces.
+
+Inlined `preformatted text` with backticks.
+
+Inlined {{{preformatted}}} text `with curly` braces and backticks.
+
+Multilined preformatted text:
+{{{
+pre
+}}}
+
+{{{
+}}}
+
+
+%% This comment should be taken out of html.
+
+{{{
+# [[link]]
+<!-- [[link2]] This is not comment and should be in HTML as is. -->
+%% This is not comment and should be in HTML as is.
+# [[link3]]
+}}}
+
+All html tags should be escaped in preformatted text block.
+{{{
+hello
+    if(false){var bool=true;}
+    document.write(bool); // output:undefined
+    document.write(something+"<br />");
+}}}
+

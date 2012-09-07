@@ -1,0 +1,54 @@
+%toc
+== Weblinks ==
+Test both plain and marked-up links.
+=== With punctuation ===
+`(text URL)` or `URL,` or `URL?`
+# (http://www.abc.com/koko#lili)
+# https://en.wikipedia.org/wiki/John_Smith_(mathematician)
+# `https://en.wikipedia.org/wiki/John_Smith_(mathematician)`
+# (this link https://en.wikipedia.org/wiki/John_Smith_(mathematician))
+# http://http://en.wikipedia.org/wiki/Vim_(text_editor)  hmm
+# http://en.wikipedia.org/wiki/Vim_(text_editor)
+# http://en.wikipedia.org/wiki/Vim_(text_editor), 
+# http://en.wikipedia.org/wiki/Vim_(text_editor); 
+# http://en.wikipedia.org/wiki/Vim_(text_editor):
+# http://en.wikipedia.org/wiki/Vim_(text_editor). 
+# http://en.wikipedia.org/wiki/Vim_(text_editor)! 
+# http://en.wikipedia.org/wiki/Vim_(text_editor)?
+# http://en.wikipedia.org/wiki/Vim_(text_editor)_again?
+# (http://www.novell.com/linux/releasenotes/x86_64/SUSE-SLES/11/#rnotes-deprecated)
+# www.example.com/koko#lili not enough!
+# http://www.abc.com/koko#lili(here space is really needed!)
+# hjklhttp://www.abc.com/koko#lili
+
+=== Several on a line ===
+# http://en.wikipedia.org/wiki/Vim_(text_editor), http://en.wikipedia.org/wiki/Vim_(text_editor); http://en.wikipedia.org/wiki/Vim_(text_editor). http://en.wikipedia.org/wiki/Vim_(text_editor)! http://en.wikipedia.org/wiki/Vim_(text_editor)?
+# http://en.wikipedia.org/wiki/Vim,     http://en.wikipedia.org/wiki/Vim;    http://en.wikipedia.org/wiki/Vim.     http://en.wikipedia.org/wiki/Vim?     http://en.wikipedia.org/wiki/Vim! 
+# http://en.wikipedia.org/wiki/Vim, http://en.wikipedia.org/wiki/Vim: http://en.wikipedia.org/wiki/Vim; http://en.wikipedia.org/wiki/Vim? http://en.wikipedia.org/wiki/Vim! 
+# http://en.wikipedia.org/wiki/Vim. http://en.wikipedia.org/wiki/Vim, http://en.wikipedia.org/wiki/Vim; http://en.wikipedia.org/wiki/Vim! http://en.wikipedia.org/wiki/Vim? something
+
+=== Examples of URIs ===
+{{{
+     http://tools.ietf.org/html/rfc4248
+     ftp://ftp.is.co.za/rfc/rfc1808.txt
+     http://www.ietf.org/rfc/rfc2396.txt
+     mailto:John.Doe@example.com
+     news:comp.infosystems.www.servers.unix
+     tel:+1-816-555-1212
+     doi:10.1000/182
+     telnet://192.0.2.16:80/
+     git://github.com/gitster/git.git
+     urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+     ldap://[2001:db8::7]/c=GB?objectClass?one
+}}}
+#    http://tools.ietf.org/html/rfc4248
+#    ftp://ftp.is.co.za/rfc/rfc1808.txt
+#    http://www.ietf.org/rfc/rfc2396.txt
+#    mailto:John.Doe@example.com
+#    news:comp.infosystems.www.servers.unix
+#    tel:+1-816-555-1212
+#    doi:10.1000/182
+#    telnet://192.0.2.16:80/
+#    git://github.com/gitster/git.git
+#    urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+#    ldap://[2001:db8::7]/c=GB?objectClass?one      _Working!_

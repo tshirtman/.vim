@@ -1,0 +1,65 @@
+ <!-- vim:set ft=vimwiki: -->
+
+= Purpose =
+
+This directory contains HTML-generation tests and tools to execute them.
+
+== Usage ==
+
+To simply generate HTML for all the test files:
+# yank the `!vim ...` line below using `yy`
+# enter the command line with `:`
+# press `CTRL-R "` and `Enter`
+
+{{{
+!vim -n -u vimrc -c "exe 'VimwikiIndex' | exe 'VimwikiAll2HTML' | quit"
+}}}
+
+The generated files will be in `html` directory, which is the same level
+as the `wiki` directory.
+
+
+Alternatively:
+
+Execute `python test.py`:
+{{{
+Converting wiki to html...
+Testing...
+Tests count: 20
+Tests succeeded: 20
+Tests failed: 0
+Ok!
+}}}
+
+
+== Writing tests ==
+
+A test is a set of 2 files with the same name (but not extension): wiki file
+and corresponding html one. Wiki file should be placed into `wiki` and html
+into `expected_html` directories.
+
+For example:
+
+=== wiki/bold.wiki ===
+{{{
+*bold*
+}}}
+
+=== expected_html/bold.html ===
+{{{
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css" />
+<title>bold</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<p>
+<strong>bold</strong>
+</p>
+
+</body>
+</html>
+}}}
+

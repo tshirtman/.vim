@@ -1,0 +1,437 @@
+% Title:    Vimwiki 1.1.1 Quick Reference
+% Author:   Tomas Pospichal 
+% Modified: 2011-03-08
+% Licence:  Creative Commons Attribution--ShareAlike 3.0 Unported Licence
+%           CC BY-SA http://creativecommons.org/licenses/by-sa/3.0/
+% Format:   plain TeX
+% =============================================================
+% Instructions: use
+%   pdftex Vimwiki1.1.1QR.tex
+% to generate PDF (one A4 page in landscape orientation).
+% Won't work with normal TeX -> dvi workflow due to a number of PDF hacks
+% that help to reduce the size of the embedded font sets.
+% =============================================================
+% older Vimwiki Reference Card:
+% J.A.J. Pater (original version)
+% Gager Jacob (update)
+%
+% several used macros based on:
+% \output by Laurent Gregoire http://tnerual.eriogerg.free.fr/vim.html
+% \boxit from http://ctan.binkerton.com/ctan.readme.php?filename=macros/plain/contrib/misc/boxit.tex
+% \elink from hyperref package by Sebastian Rahtz and Heiko Oberdiek http://tug.ctan.org/cgi-bin/ctanPackageInformation.py?id=hyperref
+% =============================================================
+%----------------------------------------------------------
+% Preamble: PDF setup, fonts and macros ==============={{{1
+% PDF metadata and links =============================={{{2
+\pdfoutput=1         % blocks the execution of the normal tex command 
+\pdfpageheight=21cm  % A4 paper in landscape
+\pdfpagewidth=29.7cm
+% the following brings the size down from 141 KiB to 134 KiB (with TeX cm fonts)
+% with PostScript fonts: from 93 KiB to 86 KiB
+%\pdfminorversion=5
+%\pdfobjcompresslevel=3 
+%\pdfcompresslevel=9
+\pdfinfo % PDF dictionary with metadata
+{/Title (Vimwiki 1.1.1 Quick Reference)
+ /Author (Tomas Pospichal)
+ /Subject (Vimwiki)
+ /Keywords (Vim, wiki, reference)}
+% from hyperref package: \elink macro
+% http://tug.ctan.org/cgi-bin/ctanPackageInformation.py?id=hyperref
+% with the added blue color for link border /C [0 0 1]
+\def\bluelink#1#2{%\bluelink{URL}{text}
+\leavevmode%
+\begingroup\pdfstartlink%
+attr{/BS<</Type/Border/S/S/W 1>>/C [0 0 1]}%
+user{/Subtype/Link/A<</Type/Action/S/URI/URI(#1)>>}%
+\ignorespaces#2%
+\pdfendlink\endgroup%
+}
+%-------------------------------------
+
+% Adobe Fonts ========================================={{{2
+% Font definitions
+%%\font\secbf=cmbx10
+%\font\secbf=cmssbx10
+%\font\smallss=cmss8
+% Helvetica -----------------
+% b8tn, bc7tn, bi8r not working,bo8c all black, bc8t small caps
+% bo8r, bo8t bold oblique,bo8rn, bo8tn NW, 
+% b8r bold (upright)!
+%\font\secbf=uhvb8r
+\font\secbf=phvb8r
+%\font\smallss=uhvr8t %too big!
+%\font\smallss=uhvr8r scaled 833 %rn,tn not working c all black rc8t small caps
+\font\smallss=phvr8r scaled 833 
+%----------------------------
+% Times -----------------
+%\font\smallrm=cmr8
+%%\font\tenrm=cmr10 %not needed
+%%% URW
+%\font\tenrm=utmr8r
+%\font\tenbf=utmb8r
+%\font\tenit=utmri8r
+%%% Adobe
+\font\tenrm=ptmr8r
+\font\tenbf=ptmb8r
+\font\tenit=ptmri8r
+%\font\smallrm=cmr8
+%\font\smallrm=utmr8r scaled 833
+\font\smallrm=ptmr8r scaled 833
+%\font\smallbf=cmbx8
+%\font\smallbf=utmb8r scaled 833
+\font\smallbf=ptmb8r scaled 833
+%\font\smallit=cmti8
+%\font\smallit=utmri8r scaled 833
+\font\smallit=ptmri8r scaled 833
+\font\tinyrm=ptmr8r scaled 500
+\font\tinyit=ptmri8r scaled 500
+%-------------------
+% Courier -----------------
+%\font\tentt=ucrr8r
+\font\tentt=pcrr8r
+%\font\smalltt=cmtt8
+%\font\smalltt=ucrr8r scaled 833
+\font\smalltt=pcrr8r scaled 833
+\font\tinytt=pcrr8r scaled 500
+%-------------------------------------
+%-------------------
+%\font\tinyrm=cmr5
+%\font\tinyit=cmmi5
+%%%\font\bigbf=cmbx12
+% Macros =============================================={{{2
+% Macros: special characters in Adobe text encoding {{{3
+%TODO TODO FIXME
+% http://www.adobe.com/type/browser/info/charsets.html
+% works in Adobe fonts in \tt (probably won't work in standard TeX fonts!)
+% Defines \_ to be the character in position "5F (ASCII for the underscore character).
+\chardef\_=`\_
+\chardef\`=`\`
+\chardef\copyright=169
+\chardef\iacute=237
+%\copyright should be xE3=233 (or D3) in Adobe Symbol enc. and xA9=169 in western enc.
+% accents in AdobeWestern2: acute xB4, caron x2C7, ring x2DA, diaresis xA8
+% aacute \'a xE1, iacute \'{\i} xED=237, scaron \v{s} x161
+%-----------------------------------------------------------
+% Macros: special characters ==============================={{{3
+% Characters definitions (work with TeX fonts as well)
+\def\bs{\char92}       % \ 
+\def\lbrace{\char123}  % {
+\def\rbrace{\char125}  % }
+\def\vertbar{\char124} % |
+\def\vispace{\char"20} %TODO visible space not in Adobe text encoding?
+%-------------------------------------
+% Three columns macro {{{3
+% from Laurent Gregoire http://tnerual.eriogerg.free.fr/vim.html
+% similar to http://ctan.binkerton.com/ctan.readme.php?filename=macros/plain/contrib/misc/2columns.mac 
+% (the two column output format from Chapter 23 of the TeXbook)
+\parindent 0pt
+\nopagenumbers
+\hoffset=-1.56cm
+\voffset=-1.54cm
+\newdimen\fullhsize
+\fullhsize=27.9cm
+\hsize=8.7cm
+\vsize=19cm
+\def\fullline{\hbox to\fullhsize}
+\let\lr=L
+\newbox\leftcolumn
+\newbox\midcolumn
+\output={
+  \if L\lr
+    \global\setbox\leftcolumn=\columnbox
+    \global\let\lr=M
+  \else\if M\lr
+    \global\setbox\midcolumn=\columnbox
+    \global\let\lr=R
+  \else
+    \tripleformat
+    \global\let\lr=L
+  \fi\fi
+  \ifnum\outputpenalty>-20000
+  \else
+    \dosupereject
+  \fi}
+\def\tripleformat{
+  \shipout\vbox{\fullline{\box\leftcolumn\hfil\box\midcolumn\hfil\columnbox}}
+  \advancepageno}
+\def\columnbox{\leftline{\pagebody}}
+% a macro for deleted text
+\def\strikethrough#1{{%
+\setbox0=\hbox{#1}%
+\dimen0 0.5ex\dimen1\dimen0\advance\dimen1 by0.4pt%
+\rlap{\leaders\hrule height \dimen1 depth -\dimen0\hskip\wd0}%
+\box0
+}}
+%-------------------------------------
+% Framing macro {{{3
+% \boxit from http://ctan.binkerton.com/ctan.readme.php?filename=macros/plain/contrib/misc/boxit.tex
+\def\boxit#1{\leavevmode\hbox{\vrule\vtop{\vbox{\kern.33333pt\hrule
+    \kern1pt\hbox{\kern1pt\vbox{#1}\kern1pt}}\kern1pt\hrule}\vrule}}
+%-------------------------------------
+% Macros: sections, slash and (framed) commands {{{3
+\def\\{\hfil\break}
+\def\title#1{\hfil\underbar{\secbf #1}\hfil\par}
+\def\sect#1#2{\vskip 0.5cm {\secbf#1}\hfill #2\par\smallskip} %\sect{title}{tag}
+\def\ttt#1 {{\tinytt #1}, }   % for long lists of options, each followed by a space
+% Spaced slashes used for alternatives
+\def\nsl{\ /\ }
+\def\ssl{\thinspace{\smallrm/}\thinspace}
+%\def\ssl{\ {\smallrm/}\ }
+% Framed macros for normal mode commands
+% this line is just to have a matching fold marker for the next line {{{
+\def\ffrmbx#1{\boxit{\hbox{\strut\tt#1}}} %the argument of must \boxit must be a box 
+\def\fm#1#2{\ffrmbx{#1} \dotfill {#2}\par}
+\def\fmfm#1#2#3{\ffrmbx{#1}\nsl\ffrmbx{#2} \dotfill {#3}\par}
+\def\fmfmfm#1#2#3#4{\ffrmbx{#1}\nsl\ffrmbx{#2}\nsl\ffrmbx{#3} \dotfill {#4}\par}
+\def\fmfmfmfm#1#2#3#4#5{\ffrmbx{#1}\nsl\ffrmbx{#2}\nsl\ffrmbx{#3}\nsl\ffrmbx{#4} \dotfill {#5}\par}
+%\def\fm#1#2{\boxit{\hbox{#1}} \dotfill {#2}\par}
+% Macros for cmdline and insert mode commands
+\def\cm#1#2{{\tt#1} \dotfill {#2}\par}
+\def\cmcm#1#2#3{{\tt#1}\nsl{\tt#2} \dotfill {#3}\par}
+\def\cms#1#2{{\smalltt#1} \dotfill {\smallrm#2}\par}
+\def\cmscms#1#2#3{{\smalltt#1}\ssl{\smalltt#2} \dotfill {\smallrm#3}\par}
+\def\cmsalt#1#2{\quad{\smalltt#1} \hfill {#2}\par}
+\def\cmscmsalt#1#2{\quad{\smalltt#1}\ssl{\smalltt#2}\par}
+%-------------------------------------
+% Licence and tags {{{3
+\def\tagstyle#1{{\smallss[#1]}}
+\def\taginl{\tagstyle{inline}}
+\def\tagmll{\tagstyle{multiline}}
+\def\tagcmd{\tagstyle{normal and cmdline mode}}
+%\def\tagcmdrc{\tagstyle{cmdline mode and .vimrc}}
+\def\tagcmdweb{\tagstyle{cmdline mode and web}}
+\def\tagvimrc{\tagstyle{.vimrc}}
+\def\tagnor{\tagstyle{normal mode}}
+%\def\tagvim{\tagstyle{standard Vim feature}}
+%\def\taglic{\tagstyle{\copyright 2011~T.~Pospichal}}
+\def\taglic{\tinyrm\copyright\ 2011~T.~Posp{\iacute}chal
+\baselineskip=7pt \qquad 
+\bluelink{http://vimwiki.googlecode.com/hg/misc/Vimwiki1.1.1QR.pdf}{\tinyit Vimwiki 1.1.1 Quick Reference} is licensed under the 
+{\tinyit Creative Commons Attribution--ShareAlike 3.0 Unported Licence}
+\bluelink{http://creativecommons.org/licenses/by-sa/3.0/}{(CC BY-SA)}.
+\TeX\ source is available at
+\bluelink{http://vimwiki.googlecode.com/hg/misc/Vimwiki1.1.1QR.tex}{http://vimwiki.googlecode.com/hg/misc/Vimwiki1.1.1QR.tex}}
+%----------------------------------------------------------
+%----------------------------------------------------------
+% Document start ======================================{{{1
+\tenrm
+\title{Vimwiki 1.1.1 Quick Reference}
+%--------------------------------------
+
+\sect{Open, convert or search wiki}\tagcmd %{{{3
+\fmfm{\bs{}ww}{{\it n}\bs{}ww}{open index file of the main/the {\it n}-th wiki}
+\cmsalt{:VimwikiIndex}{(for the current wiki)}
+\fmfm{\bs{}wt}{{\it n}\bs{}wt}{open the main/{\it n}-th index file in a new tab}
+\cmsalt{:VimwikiTabIndex}{(for the current wiki)}
+\fm{\bs{}ws}{list and select from available wikis}
+\cmsalt{:VimwikiUISelect}{}
+\cm{:Vimwiki2HTML}{convert current page to HTML}
+\cm{:VimwikiAll2HTML}{convert all pages to HTML}  
+\cm{:VWS /{\it pattern}/}{search current wiki}  
+\cmsalt{:VimwikiSearch /{\smallit pattern}/}{}
+%-------------------------------------
+
+\sect{Follow or modify wiki links}\tagcmd %{{{3
+\fm{Enter}{follow (or create) wiki link}
+\cmsalt{:VimwikiFollowLink}{}
+\fmfm{Shift+Enter}{Ctrl+Enter}{split/vert.\ split and follow}
+\cmscmsalt{:VimwikiSplitLink}{:VimwikiVSplitLink}
+\fm{Backspace}{go back to the previous wiki link}
+\cmsalt{:VimwikiGoBackLink}{}
+\fmfm{Tab}{Shift+Tab}{find next/previous link}
+\cmscmsalt{:VimwikiNextLink}{:VimwikiPrevLink}
+\fmfm{\bs{}wd}{\bs{}wr}{delete/rename the current wiki page}
+\cmscmsalt{:VimwikiDeleteLink}{:VimwikiRenameLink}
+%-------------------------------------
+
+\sect{Headers, lists, tables, diary}\tagcmd %{{{3
+\fmfm{=}{-}{increase/decrease header level}
+\fm{Ctrl+Space}{toggle a todo-list item on/off} %TODO a task list item?
+\cmsalt{:VimwikiToggleListItem}{}
+\cm{:VimwikiGenerateLinks}{insert all available links here}
+\cm{:VimwikiTable {\it cols} {\it rows}}{create table}
+\fmfm{gqq}{gww}{align table}
+\fmfm{Alt+Left}{Alt+Right}{shift column left/right}
+\cmscmsalt{:VimwikiTableMoveColumnLeft}{\dots Right}
+\fmfm{\bs w\bs w}{{\it n}\bs w\bs w}{open today's diary page for main/{\it n}-th wiki}
+\cmsalt{:VimwikiMakeDiaryNote}{(for the current wiki)}
+\fmfm{\bs w\bs t}{{\it n}\bs w\bs t}{open today's diary in a tab /for {\it n}-th wiki}
+\cmsalt{:VimwikiTabMakeDiaryNote}{(for the current wiki)}
+\fmfm{Ctrl+Down}{Ctrl+Up}{open next/previous day's diary}
+\cmscmsalt{:VimwikiDiaryNextDay}{:VimwikiDiaryPrevDay}
+%-------------------------------------
+%-------------------------------------
+
+
+\sect{Text styles}\taginl %{{{3
+\cm{*text*}{bold \bf{text}}
+\cm{\_text\_}{italic \it{text}} %TODO \_ not correct in Adobe fonts
+\cm{\~{}\~{}text\~{}\~{}}{strikeout \strikethrough{text}}
+% doing all this work to prevent the use of math fonts (saving 8 KiB in PDF)
+\def\textsup#1{\raise0.8ex\hbox{#1}}
+\def\textsub#1{\raise-0.6ex\hbox{#1}}
+\cm{,{},sub,{},text\^{}super\^{}}{\textsub{\smallrm sub}text\textsup{\smallrm super}}
+\cm{\`{}code\`{}}{monospaced {\tt code}}
+%-------------------------------------
+
+\sect{Headings and breaks}\taginl %{{{3
+\cm{= text =}{header level 1}
+\cm{== text ==}{header level 2}
+%{$\vdots$\hfill$\vdots$\par}
+\vskip-0.5ex
+{:\hfill :\par}
+\cm{====== text ======}{header level 6} 
+%\cm{{\it empty\_line}}{paragraph break}
+\cm{\strut}{({\it empty\_line}) paragraph break}
+\cm{<br>}{line break}
+\cm{----}{horizontal line}
+%-------------------------------------
+
+\sect{Lists, tables, quotations and code blocks}\tagmll %{{{3
+\cm{* item}{bulleted list}
+\cm{- item}{bulleted list}
+\cm{\# item}{numbered list}
+\cm{term::~definition}{definition list}
+%\cm{\vertbar }{separator of table cells}
+\cm{\vertbar text\vertbar text\vertbar \dots\vertbar text\vertbar }{table row}
+% {} are needed to break ligatures
+\cm{\vertbar -{}-+-{}-+-{}-\vertbar }{table header separator}
+\cm{<!-{}- text -{}->}{comment, not shown in HTML}
+%\cm{\vispace\vispace\vispace\vispace text}{block of quoted text}
+%\cm{$\{\{\{$ code code \dots code $\}\}\}$}{block of code}
+\cm{\vispace\vispace\vispace\vispace text}{({\it four\_spaces}) block of quoted text}
+\cm{\lbrace \lbrace \lbrace \ code code \dots code \rbrace \rbrace \rbrace}{block of code}
+%-------------------------------------
+
+\sect{Internal links, external links and images}\taginl %{{{3
+%\sect{Internal links}\taginl
+\cm{TextText}{WikiWord link}
+\cm{!TextText}{not a WikiWord link}
+\cm{[[Text text]]}{link with an arbitrary name}
+\cmcm{[[Text\vertbar \ Desc]] }{ [[Text][Desc]]}{with descr.}
+%
+%\sect{External links and images}\taginl
+\cm{[[file:///C:/book.pdf]]}{link to a local file}
+\cm{http://abc.org/page.html}{plain link to a URL}
+\cm{[http://\dots/hp.htm My Home Page]}{with descr.}
+\smallskip
+\cm{[[images/pic.png]]}{local image}
+%\cmscms{http://\dots/pic.jpg}{[[http://\dots/pic.jpg]]}{external image}
+\cmcm{{\it URL}/pic.jpg }{ [[{\it URL}/pic.jpg]]}{external image}
+%\cm{[[http://site/pic.jpg]]}{general link}
+\cm{[[{\it URL}/pic.jpg\vertbar\ desc]]}{image with description}
+\cm{[[{\it URL}/pic.jpg\vertbar\ comment\vertbar ]]}{with alternate text}
+\cms{[[{\smallit URL}/pic.jpg\vertbar\ text\vertbar width:150px;]]}{with alt. text and size}
+\cms{[[{\smallit URL}/pic.jpg\vertbar\vertbar height:120px;]]}{without alternate text}
+%\cm{[http://site/pic.jpg http://site/thumb.jpg]}{}
+%\cmscms{[{\smallit URL}/pic.jpg {\smallit URL}/thumb.jpg]}{[[{\smallit URL}/pic.jpg\vertbar {\smallit URL}/thumb.jpg]]}{thumbnail link}
+%\cmscms{[http://site/pic.jpg http://site/thumb.jpg]}{[[http://site/pic.jpg\vertbar http://site/thumb.jpg]]}{thumbnail link}
+\cms{[{\smallit URL}/pic.jpg {\smallit URL}/thumb.jpg]}{thumbnail link}
+\cms{[[{\smallit URL}/pic.jpg\vertbar\ {\smallit URL}/thumb.jpg]]}{thumbnail link}
+%-------------------------------------
+%-------------------------------------
+
+
+\sect{Placeholders affecting HTML output}\taginl %{{{3
+%\cm{\%toc {\it Text}}{table of contents with optional title} 
+\cm{\%toc Text}{table of contents with optional title} 
+\cm{\%title Text}{use this title instead of the filename} 
+\cm{\%nohtml}{do not convert to HTML} 
+%-------------------------------------
+
+\sect{Folding, text objects and operators}\tagnor %{{{3
+\fmfmfmfm{zo}{zc}{[z}{]z}{open/close current fold/go to start/end}
+\fmfmfm{zR}{zM}{zr}{open/close all folds/reduce by one level}
+\smallskip
+\cmcm{ah}{ih}{a section segment with/without trailing empty lines}
+\cmcm{a\bs}{i\bs}{a cell/inner cell in a table}
+\cmcm{ac}{ic}{a column/inner column in a table}
+\fmfmfmfm{vah}{yah}{cah}{dah}{select/yank/change/delete section}
+%-------------------------------------
+
+\sect{Vimwiki options and additional wikis}\tagvimrc %{{{3
+\cms{let g:vimwiki\_folding=0\ssl 1}{folding {\smallbf disabled}/enabled}
+\cms{let g:vimwiki\_camel\_case=0\ssl 1}{WikiWord auto-links off/{\smallbf on}} 
+%\cms{let g:vimwiki\_table\_auto\_fmt=0 {\smallrm/} 1}{Table auto-formatting on/off}
+\cms{let g:vimwiki\_table\_auto\_fmt=0\ssl 1}{table auto-format off/{\smallbf on}}
+\cms{let g:vimwiki\_html\_header\_numbering=0\ssl 1\ssl 2}{}
+\cms{\quad}{numbering of headers in HTML {\smallbf off}/on from level 1/on from level 2}
+\hangindent=1em
+\cms{let g:vimwiki\_file\_exts='{\smallit ext1},\dots'}{recognized 
+\break extensions of local file links: {\smallbf pdf,txt,doc,rtf,xls,php,zip,rar,7z,html,gz}\hfill}
+\cms{let g:vimwiki\_valid\_html\_tags='{\smallit tag1},\dots'}{}
+\cms{\quad}{recognized HTML tags: {\smallbf b,i,s,u,sub,sup,kbd,br,hr}}
+%----------------------------------------------------------
+{
+\hangindent=1em\raggedright
+{\smallrm Other {\smalltt g:vimwiki\_{\smallit opt}} with {\smallit opt}:
+\ttt hl\_headers
+\ttt hl\_cb\_checked
+\ttt global\_ext
+\ttt upper
+\ttt lower
+\ttt auto\_checkbox
+\ttt menu
+\ttt stripsym
+\ttt badsyms
+\ttt listsyms
+\ttt use\_mouse
+\ttt fold\_lists
+\ttt fold\_trailing\_empty\_lines
+\ttt list\_ignore\_newline
+\ttt use\_calendar
+\ttt browsers
+\ttt w32\_dir\_enc
+\ttt CJK\_length
+\ttt dir\_link
+\ttt conceallevel
+}\par
+}
+\smallskip
+%Setting up additional wikis:\par
+%\cms{let g:vimwiki\_list=[\lbrace\rbrace, \lbrace 'opt1':'val1', 'opt2':'val2', \dots\rbrace, \dots]}{}
+\cms{let g:vimwiki\_list=[\lbrace\rbrace, \qquad\qquad\qquad}{default wiki}
+\cms{\quad\bs\ \lbrace '{\smallit opt1}':'{\smallit val1}', '{\smallit opt2}':'{\smallit val2}', \dots\rbrace,  \dots]}{more wikis}
+\smallskip
+\cmscms{\quad 'path'}{'path\_html':'{\smallit path}'}{location of wiki/HTML files}
+\cmscms{\quad 'html\_header'}{'html\_footer':'{\smallit file}'}{templates for HTML}
+\cms{\quad 'css\_name':'{\smallit file}'}{stylesheet: {\smallbf style.css}}
+%----------------------------------------------------------
+% more:
+{\smallrm \quad More: 
+\ttt auto\_export
+\ttt index
+\ttt ext
+\ttt syntax
+\ttt maxhi
+\ttt nested\_syntaxes
+}\par
+{\smallrm \quad Diary: 
+\ttt diary\_rel\_path
+\ttt diary\_index
+\ttt diary\_header
+\ttt diary\_link\_count
+}
+%----------------------------------------------------------
+%----------------------------------------------------------
+
+\sect{Help and information}\tagcmdweb %{{{3
+\cm{:he vimwiki}{Vimwiki help}
+%\cms{http://www.vim.org/scripts/script.php?script\_id=2226}{script}
+\cms{\bluelink{www.vim.org/scripts/script.php?script_id=2226}{www.vim.org/scripts/script.php?script\_id=2226}}{Script}
+%\cm{http://code.google.com/p/vimwiki/}{project pages}
+\hangindent=1em
+\cm{\bluelink{http://code.google.com/p/vimwiki/}{http://code.google.com/p/vimwiki/}}{Vimwiki\break project pages: wiki, issues tracker, sources and development}
+\medskip
+\taglic % Licence goes here
+%----------------------------------------------------------
+%----------------------------------------------------------
+% Document End {{{3
+%\vfill
+\supereject
+\if L\lr \else\null\vfill\eject\fi
+\if L\lr \else\null\vfill\eject\fi
+\bye
+% EOF
+% vim:foldmethod=marker

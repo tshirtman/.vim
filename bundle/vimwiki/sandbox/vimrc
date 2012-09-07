@@ -1,0 +1,18 @@
+
+" There options are required by vimwiki.
+set nocompatible
+filetype plugin on
+syntax on
+
+" Load only system and vimwiki's scripts.
+set runtimepath=src,$VIMRUNTIME
+
+" Build help tags.
+helptags src/doc
+
+" Use directories within 'test' for storing wiki and html.
+let g:vimwiki_list = [
+\	{'path': getcwd().'/sandbox/wiki', 'path_html': getcwd().'/sandbox/html',
+\    'css_name': getcwd().'src/autoload/vimwiki/style.css'}
+\]
+

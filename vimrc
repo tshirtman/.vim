@@ -134,6 +134,9 @@ noremap <Leader>T <Plug>TaskList
 noremap æ :SidewaysLeft<cr>
 noremap ù :SidewaysRight<cr>
 
+" :diffupdate is too long to type
+noremap <leader>u :diffupdate<cr>
+
 " these keys are free to map, think about them if needed
 " noremap \
 " noremap ç

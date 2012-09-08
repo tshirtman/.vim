@@ -1,1 +1,1 @@
-command Sudosave w !sudo tee %
+command Sudosave w !sudo tee > /dev/null %

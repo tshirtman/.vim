@@ -151,5 +151,6 @@
 	path = bundle/inline_edit
 	url = git://github.com/AndrewRadev/inline_edit.vim.git
 [submodule "bundle/tagbar"]
+	ignore = dirty
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git

@@ -150,3 +150,6 @@
 	ignore = dirty
 	path = bundle/inline_edit
 	url = git://github.com/AndrewRadev/inline_edit.vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git

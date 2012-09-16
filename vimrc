@@ -104,7 +104,7 @@ vnoremap <S-tab> <gv
 noremap <leader>q :bd<CR>
 
 " hide hl and signs on ctrl-l
-nnoremap <silent> <C-l> :nohl<CR>:sign unplace *<CR><C-l>
+nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
 
 " use enter in normal mode to insert empty lines, not in cmd windows
 noremap <CR> o<ESC>
@@ -118,6 +118,9 @@ nnoremap <leader>sf :setlocal spell spelllang=fr<CR>
 nnoremap <leader>se :setlocal spell spelllang=en_US<CR>
 
 nnoremap <leader>gg :GundoToggle<CR>
+
+command! Gpush Git push
+command! Gcp Git commit -m "bump" | Git push
 
 if has('gui_running')
 	set guioptions=
@@ -137,15 +140,15 @@ noremap ù :SidewaysRight<cr>
 " :diffupdate is too long to type
 noremap <leader>u :diffupdate<cr>
 
+noremap \ :<up><cr>
+
 " these keys are free to map, think about them if needed
-" noremap \
 " noremap ç
 " noremap €
 " noremap þ
 " noremap ß
 " noremap ð
 " noremap ə
-" noremap …
 " noremap ¿
 " noremap µ
 " noremap †

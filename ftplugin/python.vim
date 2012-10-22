@@ -24,6 +24,13 @@ inoremap <Nul> <C-x><C-o>
 " Wrap at 72 chars for comments.
 set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 
+" usable folding?
+set foldmethod=indent
+set foldminlines=5
+set foldnestmax=2
+set foldlevelstart=99
+set foldlevel=99
+
 " `gf` jumps to the filename under the cursor.  Point at an import statement
 " and jump to it!
 python << EOF

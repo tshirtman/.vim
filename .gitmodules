@@ -46,10 +46,6 @@
 	ignore = dirty
 	path = bundle/pydoc
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "bundle/python-mode"]
-	ignore = dirty
-	path = bundle/python-mode
-	url = git://github.com/klen/python-mode.git
 [submodule "bundle/gist-vim"]
 	ignore = dirty
 	path = bundle/gist-vim
@@ -154,3 +150,6 @@
 	ignore = dirty
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/vim-jedi"]
+	path = bundle/vim-jedi
+	url = https://github.com/davidhalter/jedi-vim

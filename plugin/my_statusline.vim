@@ -12,6 +12,11 @@ set statusline+=%{fugitive#statusline()} "fugitive
 set statusline+=%=      "left/right separator
 "set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}%*
+
+set statusline+=%#ErrorMsg#
+set statusline+=%{khuno#Status()}%*
+set statusline+=%*
+
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L,   "cursor line/total lines
 set statusline+=%p%%      "percent through file

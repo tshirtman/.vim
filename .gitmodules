@@ -151,5 +151,10 @@
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
 [submodule "bundle/vim-jedi"]
+	ignore = dirty
 	path = bundle/vim-jedi
 	url = https://github.com/davidhalter/jedi-vim
+[submodule "bundle/khuno.vim"]
+	ignore = dirty
+	path = bundle/khuno.vim
+	url = https://github.com/alfredodeza/khuno.vim

@@ -150,6 +150,9 @@
 	ignore = dirty
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/vim-jedi/jedi"]
+	path = bundle/vim-jedi/jedi
+	url = git://github.com/davidhalter/jedi.git
 [submodule "bundle/vim-jedi"]
 	ignore = dirty
 	path = bundle/vim-jedi
@@ -162,3 +165,6 @@
 	ignore = dirty
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/SkyBison"]
+	path = bundle/SkyBison
+	url = git://github.com/paradigm/SkyBison.git

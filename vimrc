@@ -1,8 +1,8 @@
 " cleanup autocommands to avoid slowdown on .vimrc reloads
-au!
+autocmd!
 
 " try to use jj instead of esc
-inoremap jj <ESC>
+inoremap jj <esc>
 
 " noesc, use jj or <c-c>
 inoremap <esc> <nop>
@@ -85,6 +85,9 @@ noremap é w
 noremap è l
 noremap È h
 
+" easier mapping to za
+nnoremap <space> za
+
 " easier mapping to switch to alternate buffer (ctrl-^)
 nnoremap _ <c-^>
 
@@ -144,7 +147,6 @@ noremap \ :<up><cr>
 
 " these keys are free to map, think about them if needed
 " noremap ç
-" noremap €
 " noremap þ
 " noremap ß
 " noremap ð
@@ -160,7 +162,10 @@ noremap \ :<up><cr>
 " noremap ≠
 
 " auto reload .vimrc when i exit it
-au BufWritePost $MYVIMRC sil so $MYVIMRC | syn on
+au BufWritePost $MYVIMRC silen so $MYVIMRC | syn on
+
+" auto relead a .vim file when i exit it
+au BufWritePost *.vim source % | syn on
 
 " easy opening of .vimrc
 noremap <leader>ev :split $MYVIMRC<cr>
@@ -177,3 +182,6 @@ noremap <leader>m :call MouseToggle()<cr>
 
 " yankring mappings
 let g:yankring_replace_n_nkey = '<c-é>'
+
+" hl occorence of word under cursor, without moving
+nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>

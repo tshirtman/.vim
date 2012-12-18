@@ -168,3 +168,6 @@
 [submodule "bundle/SkyBison"]
 	path = bundle/SkyBison
 	url = git://github.com/paradigm/SkyBison.git
+[submodule "bundle/vim-ledger"]
+	path = bundle/vim-ledger
+	url = https://github.com/cypok/vim-ledger

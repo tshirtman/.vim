@@ -76,7 +76,7 @@ let g:ctrlp_max_height = 100
 let mapleader = ","
 
 " I NEVER use U original behaviour, lets use it for c-r
-noremap U <c-r>
+nnoremap U <c-r>
 
 " use bépo for lustyjuggler
 let g:LustyJugglerKeyboardLayout = "bépo"
@@ -185,3 +185,7 @@ let g:yankring_replace_n_nkey = '<c-é>'
 
 " hl occorence of word under cursor, without moving
 nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
+
+" i often type :W by mistake
+cmap W w
+cmap Q q

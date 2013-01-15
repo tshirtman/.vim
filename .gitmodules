@@ -171,3 +171,6 @@
 [submodule "bundle/vim-ledger"]
 	path = bundle/vim-ledger
 	url = https://github.com/cypok/vim-ledger
+[submodule "bundle/slowdown.vim"]
+	path = bundle/slowdown.vim
+	url = https://github.com/artemave/slowdown.vim

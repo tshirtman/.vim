@@ -151,6 +151,7 @@
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
 [submodule "bundle/vim-jedi/jedi"]
+	ignore = dirty
 	path = bundle/vim-jedi/jedi
 	url = git://github.com/davidhalter/jedi.git
 [submodule "bundle/vim-jedi"]

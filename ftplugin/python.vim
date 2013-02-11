@@ -57,3 +57,6 @@ autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^
     "execfile(activate_this, dict(__file__=activate_this))
 "EOF
 
+" pudb auto insert
+iabbr pudb import pudb; pudb.set_trace()
+nnoremap <leader>u oimport pudb; pudb.set_trace()<esc>

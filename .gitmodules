@@ -165,3 +165,6 @@
 [submodule "bundle/vim-ledger"]
 	path = bundle/vim-ledger
 	url = https://github.com/cypok/vim-ledger
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git

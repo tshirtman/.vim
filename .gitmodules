@@ -168,3 +168,6 @@
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "bundle/googletasks-vim"]
+	path = bundle/googletasks-vim
+	url = https://github.com/mattn/googletasks-vim.git

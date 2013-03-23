@@ -171,3 +171,27 @@
 [submodule "bundle/googletasks-vim"]
 	path = bundle/googletasks-vim
 	url = https://github.com/mattn/googletasks-vim.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.git
+[submodule "bundle/vimshell"]
+	path = bundle/vimshell
+	url = https://github.com/Shougo/vimshell.git
+[submodule "bundle/vim-issues"]
+	path = bundle/vim-issues
+	url = https://github.com/mklabs/vim-issues.git
+[submodule "bundle/ctrlp-gist"]
+	path = bundle/ctrlp-gist
+	url = git://github.com/mattn/ctrlp-gist.git
+[submodule "bundle/ctrlp-git"]
+	path = bundle/ctrlp-git
+	url = git://github.com/mattn/ctrlp-git.git
+[submodule "bundle/ctrlp-funky"]
+	path = bundle/ctrlp-funky
+	url = git://github.com/tacahiroy/ctrlp-funky.git
+[submodule "bundle/vim-github"]
+	path = bundle/vim-github
+	url = https://github.com/thinca/vim-github.git
+[submodule "bundle/jslint.vim"]
+	path = bundle/jslint.vim
+	url = https://github.com/hallettj/jslint.vim.git

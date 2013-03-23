@@ -20,10 +20,15 @@ while true
 do
 read -p "do you want to install packages? (Y/N)" yn
 case $yn in
-	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep;
+	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino;
 		sudo pip install flake8
 		break;;
 	[Nn]*) break;;
 	*) echo "please answer yes or no";;
 esac
 done
+
+pushd ~/.vim/bundle/jslint.vim/
+rake install
+popd
+

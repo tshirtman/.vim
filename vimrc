@@ -189,3 +189,7 @@ nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
 " i often type :W by mistake
 cmap W w
 cmap Q q
+
+" easier call to zencoding
+imap  <Plug>ZenCodingExpandAbbr
+vmap  <Plug>ZenCodingExpandVisual

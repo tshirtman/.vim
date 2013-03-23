@@ -1,5 +1,0 @@
-= Transclusion links =
-- {{http://vimwiki.googlecode.com/hg/images/vimwiki_logo.png}}
-- {{file:///usr/share/photo/55281496.jpg}}
-%% - {{local:images/55281496.jpg}}
-- {{images/55281496.jpg}}

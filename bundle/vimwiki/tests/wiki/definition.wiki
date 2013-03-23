@@ -1,4 +1,0 @@
-term1:: definition1
-term2::
-:: definition2
-:: definition3

@@ -1,8 +1,8 @@
 #!/bin/bash
 # run this script after cloning repo
 
-git submodule init
-git submodule update
+mkdir -p bundle
+git clone https://github.com/gmarik/vundle.git bundle/vundle
 
 mkdir -p undofiles
 
@@ -27,6 +27,8 @@ case $yn in
 	*) echo "please answer yes or no";;
 esac
 done
+
+vim -c :BundleInstall
 
 pushd ~/.vim/bundle/jslint.vim/
 rake install

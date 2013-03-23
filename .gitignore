@@ -3,3 +3,4 @@
 Session.vim
 undofiles/*
 *.un~
+bundle/*

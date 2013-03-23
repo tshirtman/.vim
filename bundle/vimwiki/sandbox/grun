@@ -1,3 +1,0 @@
-#!/bin/sh
-
-gvim -n -u sandbox/vimrc -c 'normal \ww'

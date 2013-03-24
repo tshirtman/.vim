@@ -41,19 +41,9 @@ endif
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
-if exists('&relativenumber')
-  set relativenumber
-else
-  echom "no relativenumbers"
-endif
-
 if executable("par")
     set formatprg=par
 endif
-
-" cool trick to insert dates
-iab <expr> isodate strftime("%Y-%m-%d")
-iab <expr> frdate strftime("%d/%m/%Y")
 
 " use ack-grep
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -68,9 +58,6 @@ let mapleader = ","
 " I NEVER use U original behaviour, lets use it for c-r
 nnoremap U <c-r>
 
-" use bépo for lustyjuggler
-let g:LustyJugglerKeyboardLayout = "bépo"
-
 noremap é w
 noremap è l
 noremap È h
@@ -80,12 +67,6 @@ nnoremap <space> za
 
 " easier mapping to switch to alternate buffer (ctrl-^)
 nnoremap _ <c-^>
-
-" easier windows moves
-nnoremap € <c-w><c-w>
-
-" easy switch number/rel
-noremap <silent> <leader>n :call NumbersToggle()<cr>
 
 " use tab to indent/unindent text or selected text
 nnoremap <tab> >>
@@ -112,28 +93,39 @@ nnoremap <leader>se :setlocal spell spelllang=en_US<CR>
 
 nnoremap <leader>gg :GundoToggle<CR>
 
-command! Gpush Git push
-command! Gcp Git commit -m "bump" | Git push
-
-if has('gui_running')
-	set guioptions=
-	colorscheme pablo
-else
-        set t_Co=256
-endif
-
 let g:multiedit_nomappings=1
 
-
 noremap <Leader>T <Plug>TaskList
-
-noremap æ :SidewaysLeft<cr>
-noremap ù :SidewaysRight<cr>
 
 " :diffupdate is too long to type
 noremap <leader>u :diffupdate<cr>
 
 noremap \ :<up><cr>
+
+" auto reload .vimrc when i save it
+au BufWritePost $MYVIMRC silen so $MYVIMRC | syn on
+
+" auto relead a .vim file when i save it
+au BufWritePost *.vim source % | syn on
+
+" easy opening of .vimrc
+noremap <leader>ev :split $MYVIMRC<cr>
+
+function! MouseToggle()
+    if &mouse == 'a'
+        set mouse=
+    else
+        set mouse=a
+    endif
+endfunction
+
+noremap <leader>m :call MouseToggle()<cr>
+
+" hl occorence of word under cursor, without moving
+nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
+
+" easier call to zencoding
+let g:user_zen_leader_key = '<leader>e'
 
 " these keys are free to map, think about them if needed
 " noremap ç
@@ -150,35 +142,3 @@ noremap \ :<up><cr>
 " noremap ÷
 " noremap ×
 " noremap ≠
-
-" auto reload .vimrc when i exit it
-au BufWritePost $MYVIMRC silen so $MYVIMRC | syn on
-
-" auto relead a .vim file when i exit it
-au BufWritePost *.vim source % | syn on
-
-" easy opening of .vimrc
-noremap <leader>ev :split $MYVIMRC<cr>
-
-function! MouseToggle()
-    if &mouse == 'a'
-        set mouse=
-    else
-        set mouse=a
-    endif
-endfunction
-
-noremap <leader>m :call MouseToggle()<cr>
-
-" yankring mappings
-let g:yankring_replace_n_nkey = '<c-é>'
-
-" hl occorence of word under cursor, without moving
-nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
-
-" i often type :W by mistake
-cmap W w
-cmap Q q
-
-" easier call to zencoding
-let g:user_zen_leader_key = '<leader>e'

@@ -16,19 +16,7 @@ filetype plugin indent on
 " easier to type than \
 let mapleader = ","
 
-set ruler
-set wildmenu
-set bg=dark
-set syntax=auto
-set number
 set autoindent
-set hlsearch
-set scrolloff=999
-set incsearch
-set ignorecase
-set smartcase
-set laststatus=2
-set showcmd
 set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.

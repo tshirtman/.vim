@@ -181,4 +181,4 @@ cmap W w
 cmap Q q
 
 " easier call to zencoding
-let g:user_zen_leader_key = '<c-e>'
+let g:user_zen_leader_key = '<leader>e'

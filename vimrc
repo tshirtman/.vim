@@ -30,10 +30,6 @@ set clipboard+=unnamed " system clipboard as default register.
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
-if executable("par")
-    set formatprg=par
-endif
-
 " use ack-grep
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 

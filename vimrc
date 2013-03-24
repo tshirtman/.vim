@@ -56,11 +56,6 @@ noremap <leader>q :bd<CR>
 " hide hl and signs on ctrl-l
 nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
 
-" use enter in normal mode to insert empty lines, not in cmd windows
-noremap <CR> o<ESC>
-au CmdwinEnter * nnoremap <cr> <cr>
-au CmdwinLeave * nnoremap <cr> o<esc>
-
 " trigger french or english spell correction
 nnoremap <leader>sf :setlocal spell spelllang=fr<CR>
 nnoremap <leader>se :setlocal spell spelllang=en_US<CR>

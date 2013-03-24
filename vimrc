@@ -25,7 +25,5 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:ctrlp_map = '<c-b>'
 let g:ctrlp_max_height = 100
 
-let g:multiedit_nomappings=1
-
 " easier call to zencoding
 let g:user_zen_leader_key = '<leader>e'

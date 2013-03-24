@@ -1,4 +1,10 @@
-" load vundle config
+" I try to keep the vimrc short, so most config is in small plugins
+" some of these small plugins have pretty strong effects, so you may want to
+" check them if you are using my conf and you are not me (if you are me, you
+" may disregard that and question your sanity because you are talking to
+" yourself)
+
+" load vundle config, this is better left at the top
 source ~/.vim/vundle-list.vim
 
 " cleanup autocommands to avoid slowdown on .vimrc reloads
@@ -32,53 +38,6 @@ set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
 " use ack-grep
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-" I NEVER use U original behaviour, lets use it for c-r
-nnoremap U <c-r>
-
-noremap é w
-noremap è l
-noremap È h
-
-" easier mapping to za
-nnoremap <space> za
-
-" easier mapping to switch to alternate buffer (ctrl-^)
-nnoremap _ <c-^>
-
-" close buffer on leader-q
-noremap <leader>q :bd<CR>
-
-" hide hl and signs on ctrl-l
-nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
-
-nnoremap <leader>gg :GundoToggle<CR>
-
-noremap <Leader>T <Plug>TaskList
-
-" :diffupdate is too long to type
-noremap <leader>u :diffupdate<cr>
-
-noremap \ :<up><cr>
-
-" hl occurence of word under cursor, without moving
-nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
-
-" these keys are free to map, think about them if needed
-" noremap ç
-" noremap þ
-" noremap ß
-" noremap ð
-" noremap ə
-" noremap ¿
-" noremap µ
-" noremap †
-" noremap —
-" noremap ±
-" noremap −
-" noremap ÷
-" noremap ×
-" noremap ≠
 
 " plugin specific configs that can't go into plugins
 " change ctrl-p shortcut because of conflict with replace paste

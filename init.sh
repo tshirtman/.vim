@@ -28,7 +28,7 @@ case $yn in
 esac
 done
 
-vim -c :BundleInstall
+vim -u vundle-list.vim -c :BundleInstall
 
 pushd ~/.vim/bundle/jslint.vim/
 rake install

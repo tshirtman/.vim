@@ -7,6 +7,9 @@ autocmd!
 syntax on
 filetype plugin indent on
 
+" easier to type than \
+let mapleader = ","
+
 set ruler
 set wildmenu
 set bg=dark
@@ -24,14 +27,6 @@ set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.
 
-" use a seperate file to store history, so it works cross-session
-if exists('&undofile')
-  set undofile
-  set undodir=$HOME/.vim/undofiles
-else
-  echom "no undofiles"
-endif
-
 " ignore common non-editable files in projects
 set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 
@@ -46,9 +41,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:ctrlp_map = '<c-b>'
 let g:ctrlp_max_height = 100
 
-" easier to type than \
-let mapleader = ","
-
 " I NEVER use U original behaviour, lets use it for c-r
 nnoremap U <c-r>
 
@@ -62,12 +54,6 @@ nnoremap <space> za
 " easier mapping to switch to alternate buffer (ctrl-^)
 nnoremap _ <c-^>
 
-" use tab to indent/unindent text or selected text
-nnoremap <tab> >>
-nnoremap <S-tab> <<
-vnoremap <tab> >gv
-vnoremap <S-tab> <gv
-
 " close buffer on leader-q
 noremap <leader>q :bd<CR>
 
@@ -78,8 +64,6 @@ nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
 noremap <CR> o<ESC>
 au CmdwinEnter * nnoremap <cr> <cr>
 au CmdwinLeave * nnoremap <cr> o<esc>
-
-let g:xml_syntax_folding=1
 
 " trigger french or english spell correction
 nnoremap <leader>sf :setlocal spell spelllang=fr<CR>
@@ -96,26 +80,7 @@ noremap <leader>u :diffupdate<cr>
 
 noremap \ :<up><cr>
 
-" auto reload .vimrc when i save it
-au BufWritePost $MYVIMRC silen so $MYVIMRC | syn on
-
-" auto relead a .vim file when i save it
-au BufWritePost *.vim source % | syn on
-
-" easy opening of .vimrc
-noremap <leader>ev :split $MYVIMRC<cr>
-
-function! MouseToggle()
-    if &mouse == 'a'
-        set mouse=
-    else
-        set mouse=a
-    endif
-endfunction
-
-noremap <leader>m :call MouseToggle()<cr>
-
-" hl occorence of word under cursor, without moving
+" hl occurence of word under cursor, without moving
 nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
 
 " easier call to zencoding

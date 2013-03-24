@@ -45,6 +45,5 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'thinca/vim-github'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vimwiki'
-"Bundle ''
 
 filetype plugin indent on

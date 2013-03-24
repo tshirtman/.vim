@@ -1,3 +1,6 @@
+" load vundle config
+source ~/.vim/vundle-list.vim
+
 " cleanup autocommands to avoid slowdown on .vimrc reloads
 autocmd!
 
@@ -7,21 +10,8 @@ inoremap jj <esc>
 " noesc, use jj or <c-c>
 inoremap <esc> <nop>
 
-if has("win32")
-	" fix pathogen
-	let $VIMHOME=expand('<sfile>:p:h:h')
-	so $VIMHOME\_vim\autoload\pathogen.vim
-	call pathogen#infect('$VIMHOME\_vim\bundle')
-	" fix backspace in insert mode, remember, we are on windows, we need
-	" twice the BS :P
-	se bs=2
-endif
-
 syntax on
 filetype plugin indent on
-
-silent! call pathogen#infect()
-silent! call pathogen#helptags()
 
 set ruler
 set wildmenu
@@ -191,5 +181,4 @@ cmap W w
 cmap Q q
 
 " easier call to zencoding
-imap  <Plug>ZenCodingExpandAbbr
-vmap  <Plug>ZenCodingExpandVisual
+let g:user_zen_leader_key = '<c-e>'

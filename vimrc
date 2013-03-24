@@ -33,10 +33,6 @@ set wildignore+=*.so,*.swo,*.swp,*.pyc,*.pyo,~*.un
 " use ack-grep
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" change ctrl-p shortcut because of conflict with replace paste
-let g:ctrlp_map = '<c-b>'
-let g:ctrlp_max_height = 100
-
 " I NEVER use U original behaviour, lets use it for c-r
 nnoremap U <c-r>
 
@@ -56,13 +52,7 @@ noremap <leader>q :bd<CR>
 " hide hl and signs on ctrl-l
 nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
 
-" trigger french or english spell correction
-nnoremap <leader>sf :setlocal spell spelllang=fr<CR>
-nnoremap <leader>se :setlocal spell spelllang=en_US<CR>
-
 nnoremap <leader>gg :GundoToggle<CR>
-
-let g:multiedit_nomappings=1
 
 noremap <Leader>T <Plug>TaskList
 
@@ -73,9 +63,6 @@ noremap \ :<up><cr>
 
 " hl occurence of word under cursor, without moving
 nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
-
-" easier call to zencoding
-let g:user_zen_leader_key = '<leader>e'
 
 " these keys are free to map, think about them if needed
 " noremap ç
@@ -92,3 +79,13 @@ let g:user_zen_leader_key = '<leader>e'
 " noremap ÷
 " noremap ×
 " noremap ≠
+
+" plugin specific configs that can't go into plugins
+" change ctrl-p shortcut because of conflict with replace paste
+let g:ctrlp_map = '<c-b>'
+let g:ctrlp_max_height = 100
+
+let g:multiedit_nomappings=1
+
+" easier call to zencoding
+let g:user_zen_leader_key = '<leader>e'

@@ -4,12 +4,6 @@ source ~/.vim/vundle-list.vim
 " cleanup autocommands to avoid slowdown on .vimrc reloads
 autocmd!
 
-" try to use jj instead of esc
-inoremap jj <esc>
-
-" noesc, use jj or <c-c>
-inoremap <esc> <nop>
-
 syntax on
 filetype plugin indent on
 

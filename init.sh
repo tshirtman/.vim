@@ -18,10 +18,21 @@ done
 
 while true
 do
+read -p "do you want to link jshintrc to ~/.jshintrc (Y/N)" yn
+case $yn in
+	[Yy]*) ln -s ~/.vim/jshintrc ~/.jshintrc; break;;
+	[Nn]*) break;;
+	*) echo "please answer yes or no";;
+esac
+done
+
+while true
+do
 read -p "do you want to install packages? (Y/N)" yn
 case $yn in
-	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino;
+	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino npm;
 		sudo pip install flake8
+		sudo npm install jshint -g
 		break;;
 	[Nn]*) break;;
 	*) echo "please answer yes or no";;

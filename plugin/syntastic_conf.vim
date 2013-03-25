@@ -1,6 +1,6 @@
 " syntastic configuration
 let g:syntastic_mode_map = { 'mode': 'active',
-                            \'active_filetypes': ['ruby', 'php', 'python', 'c'],
+                            \'active_filetypes': ['ruby', 'php', 'python', 'c', 'javascript'],
                             \'passive_filetypes': ['puppet'] }
 
 let g:syntastic_enable_signs=1

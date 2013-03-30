@@ -27,3 +27,6 @@ let g:ctrlp_max_height = 100
 
 " easier call to zencoding
 let g:user_zen_leader_key = '<leader>e'
+
+" yankring mappings
+let g:yankring_replace_n_nkey = '<c-é>'

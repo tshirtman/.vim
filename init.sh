@@ -31,7 +31,7 @@ do
 read -p "do you want to install packages? (Y/N)" yn
 case $yn in
 	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino npm;
-		sudo pip install flake8
+		sudo pip install flake8 -u
 		sudo npm install jshint -g
 		break;;
 	[Nn]*) break;;

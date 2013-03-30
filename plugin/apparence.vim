@@ -10,3 +10,6 @@ set smartcase
 set incsearch
 set showcmd
 set laststatus=2
+set ttyfast
+set lazyredraw
+set shortmess+=afilmnrxoOtT

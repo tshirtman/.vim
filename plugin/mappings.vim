@@ -29,6 +29,8 @@ noremap \ :<up><cr>
 " hl occurence of word under cursor, without moving
 nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
 
+nnoremap <leader>f :QFGrep<CR>
+
 " these keys are free to map, think about them if needed
 " noremap ç
 " noremap þ

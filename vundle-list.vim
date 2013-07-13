@@ -49,5 +49,7 @@ Bundle 'vimwiki'
 Bundle 'pangloss/vim-javascript'
 Bundle 'walm/jshint.vim.git'
 Bundle 'sk1418/QFGrep'
+Bundle 'https://github.com/gregsexton/MatchTag'
+Bundle 'dhruvasagar/vim-table-mode'
 
 filetype plugin indent on

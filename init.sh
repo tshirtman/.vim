@@ -40,8 +40,3 @@ esac
 done
 
 vim -u vundle-list.vim +:BundleInstall +q
-
-pushd ~/.vim/bundle/jslint.vim/
-rake install
-popd
-

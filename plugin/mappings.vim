@@ -31,6 +31,7 @@ nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
 
 nnoremap <leader>f :QFGrep<CR>
 
+map <leader>gs :Gstatus<cr>
 " these keys are free to map, think about them if needed
 " noremap ç
 " noremap þ

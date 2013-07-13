@@ -6,3 +6,5 @@ au BufWritePost *.vim source % | syn on
 
 " easy opening of .vimrc
 noremap <leader>ev :split $MYVIMRC<cr>
+" of git plugins
+noremap <leader>ed :e ~/.vim/plugin/

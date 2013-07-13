@@ -30,3 +30,6 @@ let g:user_zen_leader_key = '<leader>e'
 
 " yankring mappings
 let g:yankring_replace_n_nkey = '<c-é>'
+
+" unite replace yankring
+let g:unite_source_history_yank_enable = 1

@@ -1,4 +1,4 @@
-call unite#custom#source(['matcher_fuzzy'])
+call unite#custom#source('file', 'matcher', 'matcher_fuzzy')
 
 nnoremap <C-b> :Unite -start-insert file_rec/async<cr>
 nnoremap <space>/ :Unite grep:.<cr>

@@ -59,5 +59,6 @@ Bundle 'thinca/vim-unite-history'
 Bundle 't9md/vim-unite-ack'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/neocomplcache'
+Bundle 'lukerandall/haskellmode-vim'
 
 filetype plugin indent on

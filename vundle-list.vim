@@ -60,5 +60,11 @@ Bundle 't9md/vim-unite-ack'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'lukerandall/haskellmode-vim'
+Bundle 'tpope/vim-abolish'
+Bundle 'kshenoy/vim-signature'
+Bundle 'ujihisa/unite-colorscheme'
+Bundle 'tpope/vim-speeddating'
+Bundle 'gregsexton/gitv'
+Bundle 'nvie/vim-rst-tables.git'
 
 filetype plugin indent on

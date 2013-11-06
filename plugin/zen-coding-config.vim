@@ -1,1 +1,1 @@
-let g:userzen_leader_key = '<c-e>'
+let g:user_zen_leader_key = '<c-e>'

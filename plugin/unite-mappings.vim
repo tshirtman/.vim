@@ -1,6 +1,6 @@
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 "call unite#custom#source('file', 'matcher', 'matcher_fuzzy')
-call unite#custom#source('file_rec/async', 'ignore_pattern', '\.buildozer*')
+call unite#custom#source('file_rec/async', 'ignore_pattern', '\.buildozer*\|build\|doc')
 
 nnoremap <C-b> :Unite -start-insert file_rec/async<cr>
 nnoremap <space>/ :Unite grep:.<cr>

@@ -5,3 +5,6 @@ set expandtab
 set tabstop=8
 set list
 set listchars=tab:__,trail:.
+set foldmethod=indent
+set foldlevelstart=99
+set foldlevel=99

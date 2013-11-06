@@ -33,3 +33,8 @@ let g:yankring_replace_n_nkey = '<c-é>'
 
 " unite replace yankring
 let g:unite_source_history_yank_enable = 1
+
+" rst table, change mappings
+let no_rst_table_maps = 1
+noremap <leader>tc :call ReformatTable()<CR>
+noremap <leader>tf :call ReflowTable()<CR>

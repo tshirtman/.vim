@@ -25,8 +25,8 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:ctrlp_map = '<c-b>'
 let g:ctrlp_max_height = 100
 
-" easier call to zencoding
-let g:user_zen_leader_key = '<leader>e'
+" easier call to emmet
+let g:user_emmet_leader_key = '<leader>e'
 
 " yankring mappings
 let g:yankring_replace_n_nkey = '<c-é>'

@@ -30,9 +30,9 @@ while true
 do
 read -p "do you want to install packages? (Y/N)" yn
 case $yn in
-	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino npm python-pip ghc ghc-doc ghc-haddock;
-		sudo pip install flake8 -u
-		sudo npm install jshint -g
+	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino npm python-pip ghc ghc-doc ghc-haddock
+		sudo pip install --upgrade flake8
+		sudo npm install -g jshint
 		break;;
 	[Nn]*) break;;
 	*) echo "please answer yes or no";;

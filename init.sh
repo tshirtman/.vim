@@ -40,3 +40,6 @@ esac
 done
 
 vim -u vundle-list.vim +:BundleInstall +q
+cd bundle/vimproc.vim/
+make
+cd -

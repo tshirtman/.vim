@@ -14,3 +14,7 @@ already have a .vimrc, in which case, do the merge yourself
 ask your password if needed)
 
 * it will call vim and tell it to call bundles
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tshirtman/.vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

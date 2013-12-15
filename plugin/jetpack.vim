@@ -1,1 +1,1 @@
-map <leader>b :ls<cr>:b 
+map <leader>. :ls<cr>:b 

@@ -33,6 +33,7 @@ case $yn in
 	[Yy]*) sudo apt-get install vim-nox python-simplejson exuberant-ctags curl ack-grep rhino npm python-pip ghc ghc-doc ghc-haddock
 		sudo pip install --upgrade flake8
 		sudo npm install -g jshint
+		sudo pip install vim_bridge
 		break;;
 	[Nn]*) break;;
 	*) echo "please answer yes or no";;

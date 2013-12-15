@@ -6,7 +6,7 @@ noremap è l
 noremap È h
 
 " easier mapping to za
-nnoremap <space> za
+nnoremap <leader><space> za
 
 " easier mapping to switch to alternate buffer (ctrl-^)
 nnoremap _ <c-^>

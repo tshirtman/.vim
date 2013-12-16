@@ -35,6 +35,7 @@ map <leader>gs :Gstatus<cr>
 
 nnoremap <leader>v :Gitv<cr>
 nnoremap <leader>V :Gitv!<cr>
+nnoremap <leader>a :Ack 
 " these keys are free to map, think about them if needed
 " noremap ç
 " noremap þ

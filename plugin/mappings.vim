@@ -36,6 +36,13 @@ map <leader>gs :Gstatus<cr>
 nnoremap <leader>v :Gitv<cr>
 nnoremap <leader>V :Gitv!<cr>
 nnoremap <leader>a :Ack 
+
+noremap <silent> <leader>tc :call ReformatTable()<CR>
+noremap <silent> <leader>tf :call ReflowTable()<CR>
+
+inoremap <silent> <leader>tc <esc>:call ReformatTable()<CR>i
+inoremap <silent> <leader>tf <esc>:call ReflowTable()<CR>i
+
 " these keys are free to map, think about them if needed
 " noremap ç
 " noremap þ

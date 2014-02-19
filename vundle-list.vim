@@ -123,5 +123,7 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'gregsexton/gitv'
 " restructured text tables edition
 Bundle 'nvie/vim-rst-tables.git'
+Bundle 'tpope/vim-jdaddy.git'
+Bundle 'tpope/vim-vinegar.git'
 
 filetype plugin indent on

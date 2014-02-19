@@ -1,3 +1,3 @@
 " i often type :W by mistake
-cmap W w
+command W w
 cmap Q q

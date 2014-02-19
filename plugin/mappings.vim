@@ -27,7 +27,7 @@ noremap <leader>u :diffupdate<cr>
 noremap \ :<up><cr>
 
 " hl occurence of word under cursor, without moving
-nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
+"nnoremap <silent> - :let @/='\<'.expand('<cword>').'\>'<bar>set hlsearch<cr>
 
 nnoremap <leader>f :QFGrep<CR>
 

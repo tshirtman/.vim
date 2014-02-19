@@ -66,5 +66,6 @@ Bundle 'ujihisa/unite-colorscheme'
 Bundle 'tpope/vim-speeddating'
 Bundle 'gregsexton/gitv'
 Bundle 'nvie/vim-rst-tables.git'
+Bundle 'tpope/vim-jdaddy.git'
 
 filetype plugin indent on

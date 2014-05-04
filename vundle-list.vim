@@ -125,5 +125,7 @@ Bundle 'gregsexton/gitv'
 Bundle 'nvie/vim-rst-tables.git'
 Bundle 'tpope/vim-jdaddy.git'
 Bundle 'tpope/vim-vinegar.git'
+" unix helpers
+Bundle 'tpope/vim-eunuch.git'
 
 filetype plugin indent on

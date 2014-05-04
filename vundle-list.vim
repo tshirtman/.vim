@@ -48,7 +48,7 @@ Bundle 'scrooloose/syntastic'
 " interface to undo tree (yes, history is a tree, not a line)
 Bundle 'sjl/gundo.vim'
 " python introspection + refactoring
-Bundle 'sontek/rope-vim'
+"Bundle 'sontek/rope-vim'
 " repeat moves
 Bundle 'spiiph/vim-space'
 " automatically manage splits like a tiling wm
@@ -90,7 +90,7 @@ Bundle 'walm/jshint.vim.git'
 " quickfix improvements
 Bundle 'sk1418/QFGrep'
 " html tag matching
-Bundle 'https://github.com/gregsexton/MatchTag'
+Bundle 'gregsexton/MatchTag.git'
 " table edition
 Bundle 'dhruvasagar/vim-table-mode'
 " general purpose interface to various functions

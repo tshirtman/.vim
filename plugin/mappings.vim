@@ -31,7 +31,8 @@ noremap \ :<up><cr>
 
 nnoremap <leader>f :QFGrep<CR>
 
-map <leader>gs :Gstatus<cr>
+map gs :Gstatus<cr>
+map gc :Gcommit<cr>
 
 nnoremap <leader>v :Gitv<cr>
 nnoremap <leader>V :Gitv!<cr>

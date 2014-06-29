@@ -1,10 +1,11 @@
-set softtabstop=4
-set textwidth=79
-set shiftwidth=4
-set expandtab
-set tabstop=8
-set list
-set listchars=tab:__,trail:.
-set foldmethod=indent
-set foldlevelstart=99
-set foldlevel=99
+setlocal softtabstop=4
+setlocal textwidth=79
+setlocal shiftwidth=4
+setlocal expandtab
+setlocal tabstop=8
+setlocal list
+setlocal listchars=tab:__,trail:.
+setlocal foldmethod=indent
+setlocal foldlevelstart=99
+setlocal foldlevel=99
+setlocal commentstring=#\ %s

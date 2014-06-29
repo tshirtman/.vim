@@ -42,7 +42,7 @@ Bundle 'mattn/emmet-vim'
 " better grep
 Bundle 'mileszs/ack.vim'
 " get clever comment/uncomment in a lot of languages
-Bundle 'scrooloose/nerdcommenter'
+"Bundle 'scrooloose/nerdcommenter'
 " check synthax in a lot of languages, saves you time
 Bundle 'scrooloose/syntastic'
 " interface to undo tree (yes, history is a tree, not a line)
@@ -125,7 +125,11 @@ Bundle 'gregsexton/gitv'
 Bundle 'nvie/vim-rst-tables.git'
 Bundle 'tpope/vim-jdaddy.git'
 Bundle 'tpope/vim-vinegar.git'
+Bundle 'tpope/vim-commentary.git'
 " unix helpers
 Bundle 'tpope/vim-eunuch.git'
+Bundle 'vim-scripts/vim-auto-save.git'
+Bundle 'airblade/vim-gitgutter.git'
+Bundle 'arecarn/crunch.git'
 
 filetype plugin indent on

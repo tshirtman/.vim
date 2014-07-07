@@ -131,5 +131,6 @@ Bundle 'tpope/vim-eunuch.git'
 Bundle 'vim-scripts/vim-auto-save.git'
 Bundle 'airblade/vim-gitgutter.git'
 Bundle 'arecarn/crunch.git'
+Bundle 'tpope/vim-unimpaired'
 
 filetype plugin indent on

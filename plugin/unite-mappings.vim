@@ -9,6 +9,7 @@ nnoremap <c-p> :Unite history/yank<cr>
 nnoremap <leader>b :Unite -quick-match buffer<cr>
 
 nnoremap <leader>o :Unite outline<cr>
+nnoremap <leader>T :Unite tag<cr>
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{

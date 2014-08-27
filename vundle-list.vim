@@ -108,7 +108,7 @@ Bundle 't9md/vim-unite-ack'
 " async operations for plugins
 Bundle 'Shougo/vimproc.vim'
 " completion for lots of languages
-Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplete.vim'
 " good haskell integration
 Bundle 'lukerandall/haskellmode-vim'
 " search/replace with variations

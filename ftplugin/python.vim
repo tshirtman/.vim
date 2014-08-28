@@ -60,3 +60,4 @@ autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^
 " pudb auto insert
 iabbr pudb import pudb; pudb.set_trace()
 nnoremap <leader>u oimport pudb; pudb.set_trace()<esc>
+iabbr ifname if __name__ == '__main__':

@@ -1,7 +1,7 @@
 set ruler
 set wildmenu
 set bg=dark
-set number
+set nonumber
 set syntax=auto
 set hlsearch
 set ignorecase

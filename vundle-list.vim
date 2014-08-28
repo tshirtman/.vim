@@ -132,5 +132,8 @@ Bundle 'vim-scripts/vim-auto-save.git'
 Bundle 'airblade/vim-gitgutter.git'
 Bundle 'arecarn/crunch.git'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'wellle/targets.vim'
+Bundle 'vim-scripts/CursorLineCurrentWindow'
+Bundle 'inside/vim-search-pulse'
 
 filetype plugin indent on

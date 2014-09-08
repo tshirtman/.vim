@@ -4,136 +4,72 @@ set nocompatible
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" automatically manage vundle itself
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle' " automatically manage vundle itself
 
-"Bundle 'AndrewRadev/sideways.vim'
-"Bundle 'honza/snipmate-snippets'
-" jump directly to multiples of your motion
-Bundle 'Lokaltog/vim-easymotion'
-" utility lib for plugins
-Bundle 'MarcWeber/vim-addon-mw-utils'
-" pep8 and others checks, async
-Bundle 'alfredodeza/khuno.vim'
-" show which mode you are in with colors
-Bundle 'bsl/obviousmode'
-" ledger (accounting) file synthax hl
-Bundle 'cypok/vim-ledger'
-" <tab> should always do the right thing
-Bundle 'ervandew/supertab'
-" python documentation integration
-Bundle 'fs111/pydoc.vim'
-" snippets integration
-Bundle 'garbas/vim-snipmate'
-" synthax hl for less-css
-Bundle 'groenewege/vim-less'
-"Bundle 'kien/ctrlp.vim'
-" color-match ()[]{}<> and friends
-Bundle 'kien/rainbow_parentheses.vim'
-" display ctags in a side buffer
-Bundle 'majutsushi/tagbar'
-" purfect integration with gist.github.com
-Bundle 'mattn/gist-vim'
-" utility lib for plugins
-Bundle 'mattn/webapi-vim'
-" implementation (expand tags shortcuts)
-" html 'zen'
-Bundle 'mattn/emmet-vim'
-" better grep
-Bundle 'mileszs/ack.vim'
-" get clever comment/uncomment in a lot of languages
-"Bundle 'scrooloose/nerdcommenter'
-" check synthax in a lot of languages, saves you time
-Bundle 'scrooloose/syntastic'
-" interface to undo tree (yes, history is a tree, not a line)
-Bundle 'sjl/gundo.vim'
-" python introspection + refactoring
-"Bundle 'sontek/rope-vim'
-" repeat moves
-Bundle 'spiiph/vim-space'
-" automatically manage splits like a tiling wm
-Bundle 'spolu/dwm.vim'
-" util lib for plugins
-Bundle 'tomtom/tlib_vim'
-" git interface so good it should be illegal
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-" fix . for complex actions
-Bundle 'tpope/vim-repeat'
-" add/remove/change [](){}<>/tags around text
-Bundle 'tpope/vim-surround'
-" cython hightlight and utils
-Bundle 'tshirtman/vim-cython'
-" display indent guides in code, sometime useful in too long methods
-Bundle 'nathanaelkane/vim-indent-guides'
-" shared yank history
-Bundle 'YankRing.vim'
-" buffer to show #XXX #TODO and othres in project
-Bundle 'TaskList.vim'
-" color preview/management
-Bundle 'colorv.vim'
-" python pep8 checks
-Bundle 'pep8'
-" jinja synthax hl
-Bundle 'Glench/Vim-Jinja2-Syntax'
-"Bundle 'hallettj/jslint.vim'
-" best python plugin out there
-Bundle 'davidhalter/jedi-vim'
-" github integration
-Bundle 'thinca/vim-github'
-" js hl
-Bundle 'pangloss/vim-javascript'
-" personnal wiki
-Bundle 'vimwiki'
-" js synthax/style checks
-Bundle 'walm/jshint.vim.git'
-" quickfix improvements
-Bundle 'sk1418/QFGrep'
-" html tag matching
-Bundle 'gregsexton/MatchTag.git'
-" table edition
-Bundle 'dhruvasagar/vim-table-mode'
-" general purpose interface to various functions
-Bundle 'Shougo/unite.vim'
-" unite interface for ctags navigation
-Bundle 'tsukkee/unite-tag'
-" unite interface to show titles/subtitels of your buffer
-Bundle 'Shougo/unite-outline'
-" unite interface to find files
-Bundle 'ujihisa/unite-locate'
-" unite interface to history tree
-Bundle 'thinca/vim-unite-history'
-" unite interface to Ack (better grep)
-Bundle 't9md/vim-unite-ack'
-" async operations for plugins
-Bundle 'Shougo/vimproc.vim'
-" completion for lots of languages
-Bundle 'Shougo/neocomplete.vim'
-" good haskell integration
-Bundle 'lukerandall/haskellmode-vim'
-" search/replace with variations
-Bundle 'tpope/vim-abolish'
-" display marks
-Bundle 'kshenoy/vim-signature'
-" manage colorscheme using unite
-Bundle 'ujihisa/unite-colorscheme'
-" quickly update dates using <c-a>/<c-x>
-Bundle 'tpope/vim-speeddating'
-" gitk clone in a vime buffer
-Bundle 'gregsexton/gitv'
-" restructured text tables edition
-Bundle 'nvie/vim-rst-tables.git'
-Bundle 'tpope/vim-jdaddy.git'
-Bundle 'tpope/vim-vinegar.git'
-Bundle 'tpope/vim-commentary.git'
-" unix helpers
-Bundle 'tpope/vim-eunuch.git'
-Bundle 'vim-scripts/vim-auto-save.git'
-Bundle 'airblade/vim-gitgutter.git'
-Bundle 'arecarn/crunch.git'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'wellle/targets.vim'
-Bundle 'vim-scripts/CursorLineCurrentWindow'
-Bundle 'inside/vim-search-pulse'
+Plugin 'Lokaltog/vim-easymotion'  "jump directly to multiples of your motion
+Plugin 'MarcWeber/vim-addon-mw-utils' " utility lib for plugins
+Plugin 'alfredodeza/khuno.vim' " pep8 and others checks, async
+Plugin 'bsl/obviousmode' " show which mode you are in with colors
+Plugin 'cypok/vim-ledger' " ledger (accounting) file synthax hl
+Plugin 'ervandew/supertab' " <tab> should always do the right thing
+Plugin 'fs111/pydoc.vim' " python documentation integration
+Plugin 'garbas/vim-snipmate' " snippets integration
+Plugin 'groenewege/vim-less' " synthax hl for less-css
+Plugin 'kien/rainbow_parentheses.vim' " color-match ()[]{}<> and friends
+Plugin 'majutsushi/tagbar' " display ctags in a side buffer
+Plugin 'mattn/gist-vim' " purfect integration with gist.github.com
+Plugin 'mattn/webapi-vim' " utility lib for plugins
+Plugin 'mattn/emmet-vim' " implementation (expand tags shortcuts) html 'zen'
+Plugin 'mileszs/ack.vim' " better grep
+Plugin 'scrooloose/syntastic' " check synthax in a lot of languages, saves you time
+Plugin 'sjl/gundo.vim' " interface to undo tree (yes, history is a tree, not a line)
+Plugin 'spiiph/vim-space' " repeat moves
+Plugin 'spolu/dwm.vim' " automatically manage splits like a tiling wm
+Plugin 'tomtom/tlib_vim' " util lib for plugins
+Plugin 'tpope/vim-fugitive' " git interface so good it should be illegal
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-repeat' " fix . for complex actions
+Plugin 'tpope/vim-surround' " add/remove/change [](){}<>/tags around text
+Plugin 'tshirtman/vim-cython' " cython hightlight and utils
+Plugin 'nathanaelkane/vim-indent-guides' " display indent guides in code, sometime useful in too long methods
+Plugin 'YankRing.vim' " shared yank history
+Plugin 'TaskList.vim' " buffer to show #XXX #TODO and othres in project
+Plugin 'colorv.vim' " color preview/management
+Plugin 'pep8' " python pep8 checks
+Plugin 'Glench/Vim-Jinja2-Syntax' " jinja synthax hl
+Plugin 'davidhalter/jedi-vim'  " python completion/refactoring best python plugin out there
+Plugin 'thinca/vim-github' " github integration
+Plugin 'pangloss/vim-javascript' " js hl
+Plugin 'vimwiki' " personnal wiki
+Plugin 'walm/jshint.vim.git' " js synthax/style checks
+Plugin 'sk1418/QFGrep' " quickfix improvements
+Plugin 'gregsexton/MatchTag.git' " html tag matching
+Plugin 'dhruvasagar/vim-table-mode' " table edition
+Plugin 'Shougo/unite.vim' " general purpose interface to various functions
+Plugin 'tsukkee/unite-tag' " unite interface for ctags navigation
+Plugin 'Shougo/unite-outline' " unite interface to show titles/subtitels of your buffer
+Plugin 'ujihisa/unite-locate' " unite interface to find files
+Plugin 'thinca/vim-unite-history' " unite interface to history tree
+Plugin 't9md/vim-unite-ack' " unite interface to Ack (better grep)
+Plugin 'Shougo/vimproc.vim' " async operations for plugins
+Plugin 'Shougo/neocomplete.vim' " completion for lots of languages
+Plugin 'lukerandall/haskellmode-vim' " good haskell integration
+Plugin 'tpope/vim-abolish' " search/replace with variations
+Plugin 'kshenoy/vim-signature' " display marks
+Plugin 'ujihisa/unite-colorscheme' " manage colorscheme using unite
+Plugin 'tpope/vim-speeddating' " quickly update dates using <c-a>/<c-x>
+Plugin 'gregsexton/gitv' " gitk clone in a vime buffer
+Plugin 'nvie/vim-rst-tables.git' " restructured text tables edition
+Plugin 'tpope/vim-jdaddy.git' " json formatting/manipulation
+Plugin 'tpope/vim-vinegar.git' " file manager improved
+Plugin 'tpope/vim-commentary.git' " simple comment/uncomment plugin
+Plugin 'tpope/vim-eunuch.git' " unix helpers
+Plugin 'vim-scripts/vim-auto-save.git' " Autosave toggle
+Plugin 'airblade/vim-gitgutter.git' " display git state in the sign bar
+Plugin 'arecarn/crunch.git' " calculator
+Plugin 'tpope/vim-unimpaired' " fast option switching
+Plugin 'wellle/targets.vim' " more text objects
+Plugin 'vim-scripts/CursorLineCurrentWindow' " fix for cursor line option
+Plugin 'inside/vim-search-pulse' " better visualisation of current search
 
 filetype plugin indent on

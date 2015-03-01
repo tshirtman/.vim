@@ -5,8 +5,8 @@
 " yourself)
 
 " load vundle config, this is better left at the top
-source ~/.vim/vundle-list.vim
 set shell=/bin/sh
+source ~/.vim/vundle-list.vim
 
 " cleanup autocommands to avoid slowdown on .vimrc reloads
 autocmd!

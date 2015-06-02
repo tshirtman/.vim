@@ -44,6 +44,9 @@ noremap <silent> <leader>tf :call ReflowTable()<CR>
 inoremap <silent> <leader>tc <esc>:call ReformatTable()<CR>i
 inoremap <silent> <leader>tf <esc>:call ReflowTable()<CR>i
 
+nnoremap <leader>y "*y
+nnoremap <leader>p "*p
+
 " these keys are free to map, think about them if needed
 " noremap ç
 " noremap þ

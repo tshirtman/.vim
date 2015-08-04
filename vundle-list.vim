@@ -73,5 +73,7 @@ Plugin 'vim-scripts/CursorLineCurrentWindow' " fix for cursor line option
 Plugin 'inside/vim-search-pulse' " better visualisation of current search
 " Plugin 'dahu/VimLint' " find bad configurations in vim
 Plugin 'ntpeters/vim-better-whitespace'  " show and strip eol whitespaces
+Plugin 'farseer90718/vim-taskwarrior'  " taskwarrior integration
+Plugin 'bling/vim-airline'  " a nice and lightweight bar
 
 filetype plugin indent on

@@ -75,5 +75,6 @@ Plugin 'inside/vim-search-pulse' " better visualisation of current search
 Plugin 'ntpeters/vim-better-whitespace'  " show and strip eol whitespaces
 Plugin 'farseer90718/vim-taskwarrior'  " taskwarrior integration
 Plugin 'bling/vim-airline'  " a nice and lightweight bar
+Plugin 'chriskempson/base16-vim'
 
 filetype plugin indent on

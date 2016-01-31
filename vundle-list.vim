@@ -76,5 +76,16 @@ Plugin 'ntpeters/vim-better-whitespace'  " show and strip eol whitespaces
 Plugin 'farseer90718/vim-taskwarrior'  " taskwarrior integration
 Plugin 'bling/vim-airline'  " a nice and lightweight bar
 Plugin 'chriskempson/base16-vim'
+Plugin 'junegunn/goyo.vim' " distraction-free writting
+Plugin 'junegunn/limelight.vim' " focus on current paragraph
+Plugin 'AndrewRadev/splitjoin.vim' " split/join lines on steroids
+Plugin 'chrisbra/unicode.vim' " unicode/digraph manipulation
+Plugin '4Evergreen4/vim-hardy'  " Arduino support :o (IDE required)
+Plugin 'vim-pandoc/vim-pandoc'  " Pandoc integration
+Plugin 'vim-pandoc/vim-pandoc-syntax' " Pandoc syntax integration
+Plugin 'dietsche/vim-lastplace.git' " open buffer to last edition place
+Plugin 'wincent/ferret' " async search/replace in multiple files (Ack)
+Plugin 'chrisbra/vim-diff-enhanced'  " allow using git diff --patience for diffs
+
 
 filetype plugin indent on

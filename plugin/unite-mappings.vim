@@ -1,8 +1,9 @@
+call unite#custom#source('file_rec/async', 'ignore_globs', split(&wildignore, ','))
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-"call unite#custom#source('file', 'matcher', 'matcher_fuzzy')
-call unite#custom#source('file_rec/async', 'ignore_pattern', '\.buildozer*\|build\|doc\|.pyc\|.pyo\|.git\|.swp\|.swo')
+call unite#custom#source('buffer,file,file_rec,file_rec/async,file_rec/git', 'sorters', 'sorter_selecta')
 
 nnoremap <C-b> :Unite -start-insert file_rec/async<cr>
+nnoremap <C-o> :Unite -start-insert file_rec/git<cr>
 nnoremap <leader>/ :Unite grep:.<cr>
 
 nnoremap <c-p> :Unite history/yank<cr>

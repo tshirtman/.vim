@@ -13,7 +13,7 @@ set listchars=tab:__,trail:.
 let python_highlight_all = 1
 
 " Smart indenting
-set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+set cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
 "set omnifunc=pythoncomplete#Complete

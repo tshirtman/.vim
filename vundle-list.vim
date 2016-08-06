@@ -46,7 +46,7 @@ Plugin 'vimwiki' " personnal wiki
 Plugin 'gregsexton/MatchTag.git' " html tag matching
 Plugin 'dhruvasagar/vim-table-mode' " table edition
 Plugin 'Shougo/unite.vim' " general purpose interface to various functions
-" Plugin 'tsukkee/unite-tag' " unite interface for ctags navigation
+Plugin 'tsukkee/unite-tag' " unite interface for ctags navigation
 " Plugin 'Shougo/unite-outline' " unite interface to show titles/subtitels of your buffer
 Plugin 'ujihisa/unite-locate' " unite interface to find files
 " Plugin 'thinca/vim-unite-history' " unite interface to history tree
@@ -87,6 +87,7 @@ Plugin 'dietsche/vim-lastplace.git' " open buffer to last edition place
 Plugin 'wincent/ferret' " async search/replace in multiple files (Ack)
 Plugin 'chrisbra/vim-diff-enhanced'  " allow using git diff --patience for diffs
 Plugin 'jamessan/vim-gnupg' " transparent edit of .gpg files
+Plugin 'ludovicchabant/vim-gutentags'  " auto generate tags
 
 
 filetype plugin indent on

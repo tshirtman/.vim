@@ -33,14 +33,14 @@ set foldlevel=99
 
 " `gf` jumps to the filename under the cursor.  Point at an import statement
 " and jump to it!
-python << EOF
-import os
-import sys
-import vim
-for p in sys.path:
-    if os.path.isdir(p):
-        vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-EOF
+"    python << EOF
+"    import os
+"    import sys
+"    import vim
+"    for p in sys.path:
+"        if os.path.isdir(p):
+"            vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
+"    EOF
 
 autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m

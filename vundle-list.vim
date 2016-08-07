@@ -88,6 +88,7 @@ Plugin 'wincent/ferret' " async search/replace in multiple files (Ack)
 Plugin 'chrisbra/vim-diff-enhanced'  " allow using git diff --patience for diffs
 Plugin 'jamessan/vim-gnupg' " transparent edit of .gpg files
 Plugin 'ludovicchabant/vim-gutentags'  " auto generate tags
+Plugin 'romainl/vim-qf'  " tame the quickfix window
 
 
 filetype plugin indent on

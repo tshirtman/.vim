@@ -8,3 +8,4 @@ au BufWritePost *.vim source % | syn on
 noremap <leader>ev :split $MYVIMRC<cr>
 " of git plugins
 noremap <leader>ed :e ~/.vim/plugin/
+noremap <leader>ep :e ~/.vim/vundle-list.vim<cr>

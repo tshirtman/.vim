@@ -40,6 +40,17 @@ case $yn in
 esac
 done
 
+while true
+do
+read -p "do you want to set vim as default editor (Y/N)" yn
+case $yn in
+	[Yy]*) sudo sudo update-alternatives --set editor /usr/bin/vim.nox
+		break;;
+	[Nn]*) break;;
+	*) echo "please answer yes or no";;
+esac
+done
+
 vim -u vundle-list.vim +:BundleInstall +q
 cd bundle/vimproc.vim/
 make

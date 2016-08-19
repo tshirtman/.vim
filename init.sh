@@ -51,6 +51,17 @@ case $yn in
 esac
 done
 
+while true
+do
+read -p "Extract simplenoterc to ~/.simplenoterc? (Y/N)" yn
+case $yn in
+	[Yy]*) gpg2 --batch --decrypt $HOME/.vim/simplenoterc.gpg > $HOME/.simplenoterc
+		break;;
+	[Nn]*) break;;
+	*) echo "please answer yes or no";;
+esac
+done
+
 vim -u vundle-list.vim +:BundleInstall +q
 cd bundle/vimproc.vim/
 make

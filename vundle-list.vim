@@ -90,6 +90,7 @@ Plugin 'jamessan/vim-gnupg' " transparent edit of .gpg files
 Plugin 'ludovicchabant/vim-gutentags'  " auto generate tags
 Plugin 'romainl/vim-qf'  " tame the quickfix window
 Plugin 'mrtazz/simplenote.vim'  " simple note sharing
+Plugin 'mgedmin/pytag.vim'
 
 
 filetype plugin indent on

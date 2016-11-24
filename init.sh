@@ -18,6 +18,16 @@ done
 
 while true
 do
+read -p "do you want to link ctags.cfg ~/.ctags (Y/N)" yn
+case $yn in
+	[Yy]*) ln -s ~/.vim/ctags.cfg ~/.ctags; break;;
+	[Nn]*) break;;
+	*) echo "please answer yes or no";;
+esac
+done
+
+while true
+do
 read -p "do you want to link jshintrc to ~/.jshintrc (Y/N)" yn
 case $yn in
 	[Yy]*) ln -s ~/.vim/jshintrc ~/.jshintrc; break;;

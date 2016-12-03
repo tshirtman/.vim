@@ -1,6 +1,5 @@
 " behavior settings
 "
-set autoindent
 set hidden
 set autoread
 set clipboard+=unnamed " system clipboard as default register.

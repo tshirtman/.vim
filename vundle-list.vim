@@ -12,7 +12,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils' " utility lib for plugins
 Plugin 'alfredodeza/khuno.vim' " pep8 and others checks, async
 Plugin 'bsl/obviousmode' " show which mode you are in with colors
 " Plugin 'cypok/vim-ledger' " ledger (accounting) file synthax hl
-Plugin 'ervandew/supertab' " <tab> should always do the right thing
+" Plugin 'ervandew/supertab' " <tab> should always do the right thing
 " Plugin 'fs111/pydoc.vim' " python documentation integration
 " Plugin 'garbas/vim-snipmate' " snippets integration
 " Plugin 'groenewege/vim-less' " synthax hl for less-css
@@ -91,5 +91,6 @@ Plugin 'jamessan/vim-gnupg' " transparent edit of .gpg files
 Plugin 'ludovicchabant/vim-gutentags'  " auto generate tags
 Plugin 'romainl/vim-qf'  " tame the quickfix window
 Plugin 'mgedmin/pytag.vim'  " :Tag command for better python tag matching
+Plugin 'ajh17/VimCompletesMe'  " lighter powerful completion
 
 filetype plugin indent on

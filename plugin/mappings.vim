@@ -14,3 +14,5 @@ map gs :Gstatus<cr>
 nnoremap <leader>v :Gitv<cr>
 nnoremap <leader>V :Gitv!<cr>
 nnoremap <leader>a :Ack 
+
+nnoremap <leader>gg :UndotreeToggle<cr>

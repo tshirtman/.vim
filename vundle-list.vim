@@ -23,7 +23,8 @@ Plugin 'mattn/webapi-vim' " utility lib for plugins
 Plugin 'mattn/emmet-vim' " implementation (expand tags shortcuts) html 'zen'
 " Plugin 'mileszs/ack.vim' " better grep
 Plugin 'scrooloose/syntastic' " check synthax in a lot of languages, saves you time
-Plugin 'sjl/gundo.vim' " interface to undo tree (yes, history is a tree, not a line)
+" Plugin 'sjl/gundo.vim' " interface to undo tree (yes, history is a tree, not a line)
+Plugin 'mbbill/undotree'
 " Plugin 'spiiph/vim-space' " repeat moves
 Plugin 'spolu/dwm.vim' " automatically manage splits like a tiling wm
 Plugin 'tomtom/tlib_vim' " util lib for plugins

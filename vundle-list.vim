@@ -46,8 +46,8 @@ Plugin 'vimwiki' " personnal wiki
 " Plugin 'walm/jshint.vim.git' " js synthax/style checks
 " Plugin 'sk1418/QFGrep' " quickfix improvements
 Plugin 'gregsexton/MatchTag.git' " html tag matching
-" Plugin 'dhruvasagar/vim-table-mode' " table edition
-Plugin 'Shougo/unite.vim' " general purpose interface to various functions
+Plugin 'dhruvasagar/vim-table-mode' " table edition
+" Plugin 'Shougo/unite.vim' " general purpose interface to various functions
 " Plugin 'tsukkee/unite-tag' " unite interface for ctags navigation
 " Plugin 'Shougo/unite-outline' " unite interface to show titles/subtitels of your buffer
 " Plugin 'ujihisa/unite-locate' " unite interface to find files
@@ -90,7 +90,10 @@ Plugin 'chrisbra/vim-diff-enhanced'  " allow using git diff --patience for diffs
 Plugin 'jamessan/vim-gnupg' " transparent edit of .gpg files
 Plugin 'ludovicchabant/vim-gutentags'  " auto generate tags
 Plugin 'romainl/vim-qf'  " tame the quickfix window
-Plugin 'mgedmin/pytag.vim'  " :Tag command for better python tag matching
+Plugin 'mrtazz/simplenote.vim'  " simple note sharing
 Plugin 'ajh17/VimCompletesMe'  " lighter powerful completion
+Plugin 'mgedmin/pytag.vim'
+Plugin 'junegunn/fzf'     " fuzzy finder and a lot more (executable)
+Plugin 'junegunn/fzf.vim' " vim plugin to go with it
 
 filetype plugin indent on

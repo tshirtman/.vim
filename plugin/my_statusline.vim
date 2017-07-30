@@ -13,7 +13,7 @@ set statusline+=%r      "read only flag
 set statusline+=%{fugitive#statusline()} "fugitive
 set statusline+=%=      "left/right separator
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}%*
+" set statusline+=%{SyntasticStatuslineFlag()}%*
 
 set statusline+=%#ErrorMsg#
 set statusline+=%{khuno#Status()}%*

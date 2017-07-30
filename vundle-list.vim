@@ -22,7 +22,7 @@ Plugin 'mattn/gist-vim' " purfect integration with gist.github.com
 Plugin 'mattn/webapi-vim' " utility lib for plugins
 Plugin 'mattn/emmet-vim' " implementation (expand tags shortcuts) html 'zen'
 " Plugin 'mileszs/ack.vim' " better grep
-Plugin 'scrooloose/syntastic' " check synthax in a lot of languages, saves you time
+" Plugin 'scrooloose/syntastic' " check synthax in a lot of languages, saves you time
 " Plugin 'sjl/gundo.vim' " interface to undo tree (yes, history is a tree, not a line)
 Plugin 'mbbill/undotree'
 " Plugin 'spiiph/vim-space' " repeat moves
@@ -95,5 +95,6 @@ Plugin 'ajh17/VimCompletesMe'  " lighter powerful completion
 Plugin 'mgedmin/pytag.vim'
 Plugin 'junegunn/fzf'     " fuzzy finder and a lot more (executable)
 Plugin 'junegunn/fzf.vim' " vim plugin to go with it
+Plugin 'w0rp/ale' " async linter
 
 filetype plugin indent on

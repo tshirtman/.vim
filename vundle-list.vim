@@ -29,6 +29,7 @@ Plugin 'mbbill/undotree'
 Plugin 'spolu/dwm.vim' " automatically manage splits like a tiling wm
 Plugin 'tomtom/tlib_vim' " util lib for plugins
 Plugin 'tpope/vim-fugitive' " git interface so good it should be illegal
+Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat' " fix . for complex actions
 Plugin 'tpope/vim-surround' " add/remove/change [](){}<>/tags around text

@@ -11,7 +11,7 @@ Plugin 'tmhedberg/matchit'
 Plugin 'MarcWeber/vim-addon-mw-utils' " utility lib for plugins
 Plugin 'alfredodeza/khuno.vim' " pep8 and others checks, async
 Plugin 'bsl/obviousmode' " show which mode you are in with colors
-" Plugin 'cypok/vim-ledger' " ledger (accounting) file synthax hl
+Plugin 'ledger/vim-ledger' " ledger (accounting) file synthax hl
 " Plugin 'ervandew/supertab' " <tab> should always do the right thing
 " Plugin 'fs111/pydoc.vim' " python documentation integration
 " Plugin 'garbas/vim-snipmate' " snippets integration

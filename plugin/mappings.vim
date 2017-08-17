@@ -16,3 +16,7 @@ nnoremap <leader>V :Gitv!<cr>
 nnoremap <leader>a :Ack 
 
 nnoremap <leader>gg :UndotreeToggle<cr>
+
+" fix <c-p> and <c-n> to filter history in command mode
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>

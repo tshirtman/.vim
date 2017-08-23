@@ -33,6 +33,7 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat' " fix . for complex actions
 Plugin 'tpope/vim-surround' " add/remove/change [](){}<>/tags around text
+Plugin 'shumphrey/fugitive-gitlab.vim'  " gitlab extension to fugitive
 Plugin 'tshirtman/vim-cython' " cython hightlight and utils
 " Plugin 'nathanaelkane/vim-indent-guides' " display indent guides in code, sometime useful in too long methods
 Plugin 'YankRing.vim' " shared yank history

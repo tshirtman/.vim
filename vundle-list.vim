@@ -48,7 +48,7 @@ Plugin 'vimwiki' " personnal wiki
 " Plugin 'walm/jshint.vim.git' " js synthax/style checks
 " Plugin 'sk1418/QFGrep' " quickfix improvements
 Plugin 'gregsexton/MatchTag.git' " html tag matching
-Plugin 'dhruvasagar/vim-table-mode' " table edition
+" Plugin 'dhruvasagar/vim-table-mode' " table edition
 " Plugin 'Shougo/unite.vim' " general purpose interface to various functions
 " Plugin 'tsukkee/unite-tag' " unite interface for ctags navigation
 " Plugin 'Shougo/unite-outline' " unite interface to show titles/subtitels of your buffer
@@ -98,5 +98,7 @@ Plugin 'mgedmin/pytag.vim'
 Plugin 'junegunn/fzf'     " fuzzy finder and a lot more (executable)
 Plugin 'junegunn/fzf.vim' " vim plugin to go with it
 Plugin 'w0rp/ale' " async linter
+Plugin 'posva/vim-vue'
+Plugin 'lilydjwg/colorizer'
 
 filetype plugin indent on

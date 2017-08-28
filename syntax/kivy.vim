@@ -1,16 +1,17 @@
-" ~/.vim/after/syntax/kivy.vim
+" ~/.vim/syntax/kivy.vim
 "
 " Vim syntax file
 " Language:	Kivy
 " Maintainer:	Gabriel Pettier <gabriel.pettier@gmail.com>
 " Last Change:	2017 august 26 
 
-syntax clear
-
 syn include @pyth $VIMRUNTIME/syntax/python.vim
 
 syn match kivyComment       /#.*\n/ display contains=pythonTodo,Spell
 syn match kivyPreProc       /^#:.*/
+syn match kivyDefine        /^#:set .*/
+syn match kivyInclude       /^#:include .*/
+syn match kivyImport        /^#:import .*/
 syn match kivyAttribute     /\I\i*/ nextgroup=kivyValue
 syn match kivyBind          /on_\I\i*:/ nextgroup=kivyValue
 syn match kivyRule          /<-*\I\i*\([,@]s*\I\i*\)*>:/
@@ -32,13 +33,15 @@ syn region kivyCanvas        start=/^\z(\s*\)canvas.*:$/ skip="^$\|^\z1\s{4}" en
 
 hi def link kivyPreproc      PreProc
 hi def link kivyComment      Comment
-hi def link kivyRule         Type
-hi def link kivyRootRule     Function
+hi def link kivyRule         Typedef
+hi def link kivyRootRule     Identifier
 hi def link kivyAttribute    Label
-hi def link kivyBind         Function
-hi def link kivyWidget       Function
-hi def link kivyCanvas       special
+hi def link kivyBind         Keyword
+hi def link kivyWidget       Type
+hi def link kivyCanvas       Function
 hi def link kivyInstruction  Statement
+hi def link KivyId           Define
+hi def link kivyDefine       Define
+hi def link kivyImport       Macro
+hi def link kivyInclude      Include
 
-hi KivyId cterm=underline
-hi KivyPreproc cterm=bold

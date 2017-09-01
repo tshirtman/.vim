@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	Kivy
 " Maintainer:	Gabriel Pettier <gabriel.pettier@gmail.com>
-" Last Change:	2017 august 29 
+" Last Change:	2017 september 1 
 
 if exists("b:current_syntax")
     finish
@@ -9,8 +9,6 @@ endif
 
 syn include @pyth $VIMRUNTIME/syntax/python.vim
 
-" syn region kivyAttribute start=/^\(\s\+\)\l\+:\n\+\z(\1\s\{4}\)\S/ skip=/^\%(\z1\S\|^$\)/ end=/^\z1\@!.*/me=s-1 contains=@pyth transparent
-" syn region kivyValue start=/^\(\s\+\)\l\+:\n\+\z(\1\s\{4}\)\S/ms=e+1 skip=/^\%(\z1\S\|^$\)/ms=e+1 end=/^\z1\@!.*/me=s-1 contains=@pyth transparent
 syn match kivyValue /.*/ contains=@pyth transparent
 
 syn match kivyVersion       /^#:kivy .*\n/ display contains=pythonTodo,Spell

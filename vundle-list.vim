@@ -100,5 +100,6 @@ Plugin 'junegunn/fzf.vim' " vim plugin to go with it
 Plugin 'w0rp/ale' " async linter
 Plugin 'posva/vim-vue'
 Plugin 'lilydjwg/colorizer'
+Plugin 'tpope/vim-rsi'  " better readline-like keybinding support
 
 filetype plugin indent on

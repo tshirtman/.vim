@@ -5,7 +5,9 @@ nnoremap U <c-r>
 nnoremap _ <c-^>
 
 " hide hl and signs on ctrl-l
-nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
+" fromstart<cr><c-l>[201~
+nnoremap <silent> <leader>l :nohl<cr>:sign unplace *<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+" nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
 
 nnoremap <leader>gg :GundoToggle<CR>
 

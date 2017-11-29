@@ -22,3 +22,10 @@ nnoremap <leader>gg :UndotreeToggle<cr>
 " fix <c-p> and <c-n> to filter history in command mode
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+nnoremap <m-o> :copen<cr>
+nnoremap <m-n> :cn<cr>
+nnoremap <m-p> :cp<cr>
+nnoremap <m-q> :ccl<cr>
+
+nnoremap <leader>/ :Ag<cr>

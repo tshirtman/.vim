@@ -101,5 +101,8 @@ Plugin 'w0rp/ale' " async linter
 Plugin 'posva/vim-vue'
 Plugin 'lilydjwg/colorizer'
 Plugin 'tpope/vim-rsi'  " better readline-like keybinding support
+Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'romainl/vim-cool'
+Plugin 'neomutt/neomutt.vim'
 
 filetype plugin indent on

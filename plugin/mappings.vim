@@ -30,3 +30,4 @@ nnoremap <m-q> :ccl<cr>
 
 nnoremap <leader>/ :Ag<cr>
 nnoremap <leader>q :bd<cr>
+nnoremap <leader>Q :silent call CleanNoNameEmptyBuffers()<cr>

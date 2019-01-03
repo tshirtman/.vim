@@ -9,3 +9,4 @@ set wildignore+=**.so,**.swo,**.swn,**.swp,**.swm,**.swk,**.swl,**.pyc,**.pyo,~*
 
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
+autocmd BufLeave * silent call CleanNoNameEmptyBuffers()

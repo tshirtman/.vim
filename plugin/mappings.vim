@@ -29,3 +29,4 @@ nnoremap <m-p> :cp<cr>
 nnoremap <m-q> :ccl<cr>
 
 nnoremap <leader>/ :Ag<cr>
+nnoremap <leader>q :bd<cr>

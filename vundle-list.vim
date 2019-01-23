@@ -34,12 +34,13 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat' " fix . for complex actions
 Plugin 'tpope/vim-surround' " add/remove/change [](){}<>/tags around text
 Plugin 'shumphrey/fugitive-gitlab.vim'  " gitlab extension to fugitive
+Plugin 'idanarye/vim-merginal' 	" manage branches in fugitive
 Plugin 'tshirtman/vim-cython' " cython hightlight and utils
 " Plugin 'nathanaelkane/vim-indent-guides' " display indent guides in code, sometime useful in too long methods
 Plugin 'YankRing.vim' " shared yank history
 " Plugin 'TaskList.vim' " buffer to show #XXX #TODO and othres in project
 " Plugin 'colorv.vim' " color preview/management
-Plugin 'pep8' " python pep8 checks
+" Plugin 'PyCQA/pycodestyle' " python pep8 checks
 " Plugin 'Glench/Vim-Jinja2-Syntax' " jinja synthax hl
 Plugin 'davidhalter/jedi-vim'  " python completion/refactoring best python plugin out there
 " Plugin 'thinca/vim-github' " github integration

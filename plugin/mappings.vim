@@ -33,3 +33,4 @@ nnoremap <leader>q :bd<cr>
 nnoremap <leader>Q :silent call CleanNoNameEmptyBuffers()<cr>
 
 nnoremap <leader>N :NERDTreeToggle<cr>
+nnoremap <leader>: :BLines<cr>

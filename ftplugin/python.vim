@@ -60,4 +60,5 @@ set errorformat=%f:%l:\ %m
 " pudb auto insert
 iabbr pudb import pudb; pudb.set_trace()
 nnoremap <leader>u oimport pudb; pudb.set_trace()<esc>
+nnoremap <leader>U oimport rpudb; rpudb.set_trace()<esc>
 iabbr ifname if __name__ == '__main__':

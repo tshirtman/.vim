@@ -104,5 +104,6 @@ Plugin 'tpope/vim-rsi'  " better readline-like keybinding support
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'romainl/vim-cool'
 Plugin 'neomutt/neomutt.vim'
+Plugin 'scrooloose/nerdtree'
 
 filetype plugin indent on

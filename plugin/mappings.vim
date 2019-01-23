@@ -6,7 +6,7 @@ nnoremap _ <c-^>
 
 " hide hl and signs on ctrl-l
 " fromstart<cr><c-l>[201~
-nnoremap <silent> <leader>l :nohl<cr>:sign unplace *<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+nnoremap <silent> <leader>l :nohl<cr>:sign unplace *<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>1000+
 " nnoremap <silent> <leader>l :nohl<CR>:sign unplace *<CR>:ccl<CR><C-l>
 
 nnoremap <leader>gg :GundoToggle<CR>
@@ -31,3 +31,5 @@ nnoremap <m-q> :ccl<cr>
 nnoremap <leader>/ :Ag<cr>
 nnoremap <leader>q :bd<cr>
 nnoremap <leader>Q :silent call CleanNoNameEmptyBuffers()<cr>
+
+nnoremap <leader>N :NERDTreeToggle<cr>

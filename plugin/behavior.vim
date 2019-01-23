@@ -1,5 +1,6 @@
 " behavior settings
-"
+
+set bs=2
 set hidden
 set autoread
 set clipboard+=unnamed,autoselect " system clipboard as default register.

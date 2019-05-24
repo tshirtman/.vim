@@ -45,12 +45,12 @@ Plugin 'YankRing.vim' " shared yank history
 Plugin 'davidhalter/jedi-vim'  " python completion/refactoring best python plugin out there
 " Plugin 'thinca/vim-github' " github integration
 " Plugin 'pangloss/vim-javascript' " js hl
-Plugin 'vimwiki' " personnal wiki
+Plugin 'vimwiki/vimwiki' " personnal wiki
 " Plugin 'walm/jshint.vim.git' " js synthax/style checks
 " Plugin 'sk1418/QFGrep' " quickfix improvements
 Plugin 'gregsexton/MatchTag.git' " html tag matching
 " Plugin 'dhruvasagar/vim-table-mode' " table edition
-" Plugin 'Shougo/unite.vim' " general purpose interface to various functions
+Plugin 'Shougo/unite.vim' " general purpose interface to various functions
 " Plugin 'tsukkee/unite-tag' " unite interface for ctags navigation
 " Plugin 'Shougo/unite-outline' " unite interface to show titles/subtitels of your buffer
 " Plugin 'ujihisa/unite-locate' " unite interface to find files
@@ -106,5 +106,7 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'romainl/vim-cool'
 Plugin 'neomutt/neomutt.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'rafi/vim-unite-issue'
+Plugin 'jreybert/vimagit'  " magit like git integration
 
 filetype plugin indent on

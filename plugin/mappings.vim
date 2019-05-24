@@ -21,6 +21,8 @@ nnoremap <leader>gn :GitGutterNextHunk<cr>
 nnoremap <leader>gp :GitGutterPrevHunk<cr>
 nnoremap <leader>ga :GitGutterStageHunk<cr>
 nnoremap <leader>gu :GitGutterUndoHunk<cr>
+nnoremap <leader>gS :Magit<cr>
+nnoremap <leader>gb :Gblame<cr>
 
 nnoremap <leader>gg :UndotreeToggle<cr>
 

@@ -17,6 +17,11 @@ nnoremap <leader>v :Gitv<cr>
 nnoremap <leader>V :Gitv!<cr>
 nnoremap <leader>a :Ack 
 
+nnoremap <leader>gn :GitGutterNextHunk<cr>
+nnoremap <leader>gp :GitGutterPrevHunk<cr>
+nnoremap <leader>ga :GitGutterStageHunk<cr>
+nnoremap <leader>gu :GitGutterUndoHunk<cr>
+
 nnoremap <leader>gg :UndotreeToggle<cr>
 
 " fix <c-p> and <c-n> to filter history in command mode

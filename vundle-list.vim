@@ -10,7 +10,6 @@ Plugin 'tmhedberg/matchit'
 " Plugin 'Lokaltog/vim-easymotion'  "jump directly to multiples of your motion
 Plugin 'MarcWeber/vim-addon-mw-utils' " utility lib for plugins
 Plugin 'alfredodeza/khuno.vim' " pep8 and others checks, async
-Plugin 'bsl/obviousmode' " show which mode you are in with colors
 Plugin 'ledger/vim-ledger' " ledger (accounting) file synthax hl
 " Plugin 'ervandew/supertab' " <tab> should always do the right thing
 " Plugin 'fs111/pydoc.vim' " python documentation integration
@@ -79,7 +78,6 @@ Plugin 'inside/vim-search-pulse' " better visualisation of current search
 " Plugin 'dahu/VimLint' " find bad configurations in vim
 Plugin 'ntpeters/vim-better-whitespace'  " show and strip eol whitespaces
 " Plugin 'farseer90718/vim-taskwarrior'  " taskwarrior integration
-" Plugin 'bling/vim-airline'  " a nice and lightweight bar
 Plugin 'chriskempson/base16-vim'
 " Plugin 'junegunn/goyo.vim' " distraction-free writting
 " Plugin 'junegunn/limelight.vim' " focus on current paragraph
@@ -108,5 +106,5 @@ Plugin 'neomutt/neomutt.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rafi/vim-unite-issue'
 Plugin 'jreybert/vimagit'  " magit like git integration
-
+Plugin 'rbong/vim-crystalline' " better status line
 filetype plugin indent on

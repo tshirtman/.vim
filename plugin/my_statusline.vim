@@ -27,7 +27,7 @@
 function! StatusLine(current, width)
   return (a:current ? crystalline#mode() . '%#Crystalline#' : '%#CrystallineInactive#')
         \ . ' %f%h%w%m%r '
-        \ . (a:current ? '%#CrystallineFill# %{fugitive#head()} ' : '')
+        \ . (a:current ? '%#CrystallineFill# %{fugitive#Statusline()} ' : '')
         \ . '%=' . (a:current ? '%#Crystalline# %{&paste?"PASTE ":""}%{&spell?"SPELL ":""}' . crystalline#mode_color() : '')
         \ . (a:width > 80 ? ' %{&ft}[%{&enc}][%{&ffs}] %l/%L %c%V %P ' : ' ')
 endfunction

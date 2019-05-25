@@ -4,6 +4,7 @@ set bs=2
 set hidden
 set autoread
 set clipboard+=unnamed,autoselect " system clipboard as default register.
+set formatoptions+=j
 
 " ignore common non-editable files in projects
 set wildignore+=**.so,**.swo,**.swn,**.swp,**.swm,**.swk,**.swl,**.pyc,**.pyo,~**.un,.buildozer*,build,doc,.git

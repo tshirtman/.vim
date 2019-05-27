@@ -25,10 +25,13 @@
 ""set statusline+=*
 
 function! StatusLine(current, width)
+  let l:filetype = &filetype
   return (a:current ? crystalline#mode() . '%#Crystalline#' : '%#CrystallineInactive#')
         \ . ' %f%h%w%m%r '
-        \ . (a:current ? '%#CrystallineFill# %{fugitive#Statusline()} ' : '')
+        \ . (a:current ? '%{tagbar#currenttag("[%s]","")}' : "")
+        \ . (a:current ? '%#CrystallineFill# %{fugitive#head()} ' : '')
         \ . '%=' . (a:current ? '%#Crystalline# %{&paste?"PASTE ":""}%{&spell?"SPELL ":""}' . crystalline#mode_color() : '')
+  	\ . (l:filetype == 'python' ? '%{khuno#Status()}%' : ' ')
         \ . (a:width > 80 ? ' %{&ft}[%{&enc}][%{&ffs}] %l/%L %c%V %P ' : ' ')
 endfunction
 
@@ -39,7 +42,7 @@ endfunction
 
 let g:crystalline_statusline_fn = 'StatusLine'
 let g:crystalline_tabline_fn = 'TabLine'
-" let g:crystalline_theme = 'default'
+let g:crystalline_theme = 'default'
 
 set showtabline=1
 set laststatus=2

@@ -107,4 +107,5 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'rafi/vim-unite-issue'
 Plugin 'jreybert/vimagit'  " magit like git integration
 Plugin 'rbong/vim-crystalline' " better status line
+Plugin 'kyuhi/vim-emoji-complete' " what the name says
 filetype plugin indent on

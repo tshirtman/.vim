@@ -12,6 +12,7 @@ set wildignore+=**.so,**.swo,**.swn,**.swp,**.swm,**.swk,**.swl,**.pyc,**.pyo,~*
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 autocmd BufLeave * silent call CleanNoNameEmptyBuffers()
+autocmd BufEnter Merginal:branchList nmap <buffer> <c-d> Dyes<cr><space>
 
 " tweak comment highlight at least in python files
 autocmd BufReadPost * highlight Comment cterm=italic ctermfg=grey

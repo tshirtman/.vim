@@ -1,0 +1,33 @@
+global !p
+from functools import lru_cache
+
+@lru_cache(10)
+def symbol_to_camelcase(name):
+    names = name.split('_')
+    if not names:
+    	return ''
+    return names[0].lower() + ''.join(map(lambda x: x.capitalize(), names[1:]))
+endglobal
+
+snippet event
+const $1 = '$1';
+
+type `!p snip.rv = symbol_to_camelcase(t[1])`Action = {
+    type: '$1',$2
+};
+
+${3:export }const `!p
+snip.rv = '{}'.format(symbol_to_camelcase(t[1]))
+` = ($4): `!p
+snip.rv = symbol_to_camelcase(t[1])`Action => ({
+    type: $1,$5
+});
+
+${6:
+case $1:
+    return {
+	...state,
+    };
+}
+$0
+endsnippet

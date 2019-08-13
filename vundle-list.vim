@@ -108,4 +108,8 @@ Plugin 'rafi/vim-unite-issue'
 Plugin 'jreybert/vimagit'  " magit like git integration
 Plugin 'rbong/vim-crystalline' " better status line
 Plugin 'kyuhi/vim-emoji-complete' " what the name says
+Plugin 'machakann/vim-highlightedyank'  " show what's been yanked
+Plugin 'python-rope/ropevim'  " rope integration
+Plugin 'SirVer/ultisnips' " Track the engine.
+Plugin 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 filetype plugin indent on
